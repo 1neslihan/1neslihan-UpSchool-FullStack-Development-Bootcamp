@@ -12,3 +12,4 @@ daha sonra butonlar yardımıyla bunları ekrana taşıdık.
 </ul>
 
 
+![MementoPattern](https://user-images.githubusercontent.com/30401423/222893807-04479864-4488-4d08-a4d5-6df0fd6b5f3b.gif)

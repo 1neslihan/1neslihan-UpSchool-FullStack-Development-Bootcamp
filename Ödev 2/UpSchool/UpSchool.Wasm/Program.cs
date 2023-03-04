@@ -6,6 +6,7 @@ using UpSchool.Wasm;
 using Blazored.LocalStorage;
 using Blazored.Toast;
 
+
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
@@ -24,5 +25,7 @@ builder.Services.AddBlazoredLocalStorage(config =>
     config.JsonSerializerOptions.ReadCommentHandling = JsonCommentHandling.Skip;
     config.JsonSerializerOptions.WriteIndented = false;
 });
+
+
 
 await builder.Build().RunAsync();

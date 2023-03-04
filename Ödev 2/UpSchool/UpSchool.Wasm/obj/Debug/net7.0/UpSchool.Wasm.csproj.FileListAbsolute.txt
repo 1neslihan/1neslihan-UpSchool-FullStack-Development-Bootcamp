@@ -842,3 +842,11 @@ C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev
 C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Wasm\obj\Debug\net7.0\build-gz\WAmmXQco.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Wasm\obj\Debug\net7.0\build-gz\L6BvRtkS.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Wasm\obj\Debug\net7.0\build-gz\r+DnoA20.gz
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Wasm\bin\Debug\net7.0\wwwroot\_framework\UpStorage.Shared.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Wasm\bin\Debug\net7.0\wwwroot\_framework\UpStorage.Shared.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Wasm\bin\Debug\net7.0\wwwroot\_framework\UpStorage.Shared.dll.gz
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Wasm\bin\Debug\net7.0\wwwroot\_framework\UpStorage.Shared.pdb.gz
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Wasm\bin\Debug\net7.0\UpStorage.Shared.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Wasm\bin\Debug\net7.0\UpStorage.Shared.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Wasm\obj\Debug\net7.0\build-gz\Q+dQxN40.gz
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Wasm\obj\Debug\net7.0\build-gz\U3q+leXi.gz

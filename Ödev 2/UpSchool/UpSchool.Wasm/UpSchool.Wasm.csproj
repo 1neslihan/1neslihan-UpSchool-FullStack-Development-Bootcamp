@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\UpSchool.Domain\UpSchool.Domain.csproj" />
+    <ProjectReference Include="..\UpStorage.Shared\UpStorage.Shared.csproj" />
   </ItemGroup>
 
 </Project>

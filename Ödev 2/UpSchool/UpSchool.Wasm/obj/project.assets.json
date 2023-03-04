@@ -517,6 +517,16 @@
         "runtime": {
           "bin/placeholder/UpSchool.Domain.dll": {}
         }
+      },
+      "UpStorage.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/UpStorage.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UpStorage.Shared.dll": {}
+        }
       }
     },
     "net7.0/browser-wasm": {
@@ -1028,6 +1038,16 @@
         },
         "runtime": {
           "bin/placeholder/UpSchool.Domain.dll": {}
+        }
+      },
+      "UpStorage.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/UpStorage.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UpStorage.Shared.dll": {}
         }
       }
     }
@@ -1914,6 +1934,11 @@
       "type": "project",
       "path": "../UpSchool.Domain/UpSchool.Domain.csproj",
       "msbuildProject": "../UpSchool.Domain/UpSchool.Domain.csproj"
+    },
+    "UpStorage.Shared/1.0.0": {
+      "type": "project",
+      "path": "../UpStorage.Shared/UpStorage.Shared.csproj",
+      "msbuildProject": "../UpStorage.Shared/UpStorage.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1922,7 +1947,8 @@
       "Blazored.Toast >= 4.1.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 7.0.3",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 7.0.3",
-      "UpSchool.Domain >= 1.0.0"
+      "UpSchool.Domain >= 1.0.0",
+      "UpStorage.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1960,6 +1986,9 @@
           "projectReferences": {
             "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Domain\\UpSchool.Domain.csproj": {
               "projectPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Domain\\UpSchool.Domain.csproj"
+            },
+            "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpStorage.Shared\\UpStorage.Shared.csproj": {
+              "projectPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpStorage.Shared\\UpStorage.Shared.csproj"
             }
           }
         }

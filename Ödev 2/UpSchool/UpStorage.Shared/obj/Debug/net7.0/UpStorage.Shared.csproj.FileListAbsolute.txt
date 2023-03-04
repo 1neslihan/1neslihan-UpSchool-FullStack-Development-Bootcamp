@@ -1,0 +1,12 @@
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpStorage.Shared\bin\Debug\net7.0\UpStorage.Shared.deps.json
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpStorage.Shared\bin\Debug\net7.0\UpStorage.Shared.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpStorage.Shared\bin\Debug\net7.0\UpStorage.Shared.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpStorage.Shared\obj\Debug\net7.0\UpStorage.Shared.csproj.AssemblyReference.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpStorage.Shared\obj\Debug\net7.0\UpStorage.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpStorage.Shared\obj\Debug\net7.0\UpStorage.Shared.AssemblyInfoInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpStorage.Shared\obj\Debug\net7.0\UpStorage.Shared.AssemblyInfo.cs
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpStorage.Shared\obj\Debug\net7.0\UpStorage.Shared.csproj.CoreCompileInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpStorage.Shared\obj\Debug\net7.0\UpStorage.Shared.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpStorage.Shared\obj\Debug\net7.0\refint\UpStorage.Shared.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpStorage.Shared\obj\Debug\net7.0\UpStorage.Shared.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpStorage.Shared\obj\Debug\net7.0\ref\UpStorage.Shared.dll

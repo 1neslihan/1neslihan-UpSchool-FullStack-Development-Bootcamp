@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xkYQM+5wk5OfLKGe0EOTpHTiR5A7G4jXhtsYULowNaU=",
+  "Hash": "bcTgobJVDh6IFZLJ6DJqDT+urJgytQ86vKuVgKn9xls=",
   "Source": "UpSchool.Wasm",
   "BasePath": "/",
   "Mode": "Root",
@@ -3519,6 +3519,40 @@
       "OriginalItemSpec": "obj\\Debug\\net7.0\\UpSchool.Wasm.pdb"
     },
     {
+      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\UpStorage.Shared.dll",
+      "SourceId": "UpSchool.Wasm",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/UpStorage.Shared.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpStorage.Shared\\bin\\Debug\\net7.0\\UpStorage.Shared.dll"
+    },
+    {
+      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\UpStorage.Shared.pdb",
+      "SourceId": "UpSchool.Wasm",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/UpStorage.Shared.pdb",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "symbol",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpStorage.Shared\\bin\\Debug\\net7.0\\UpStorage.Shared.pdb"
+    },
+    {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\WindowsBase.dll",
       "SourceId": "UpSchool.Wasm",
       "SourceType": "Computed",
@@ -5882,6 +5916,23 @@
       "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Principal.dll"
     },
     {
+      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\obj\\Debug\\net7.0\\build-gz\\Q+dQxN40.gz",
+      "SourceId": "UpSchool.Wasm",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/UpStorage.Shared.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\UpStorage.Shared.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\UpStorage.Shared.dll"
+    },
+    {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\obj\\Debug\\net7.0\\build-gz\\Q2QYhT07.gz",
       "SourceId": "UpSchool.Wasm",
       "SourceType": "Computed",
@@ -6492,6 +6543,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.Sockets.dll"
+    },
+    {
+      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\obj\\Debug\\net7.0\\build-gz\\U3q+leXi.gz",
+      "SourceId": "UpSchool.Wasm",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/UpStorage.Shared.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\UpStorage.Shared.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\UpStorage.Shared.pdb"
     },
     {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\obj\\Debug\\net7.0\\build-gz\\ucnt4yt5.gz",

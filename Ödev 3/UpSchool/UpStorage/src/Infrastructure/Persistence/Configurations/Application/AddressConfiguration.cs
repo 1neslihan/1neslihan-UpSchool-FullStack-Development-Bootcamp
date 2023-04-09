@@ -16,15 +16,16 @@ namespace Infrastructure.Persistence.Configurations.Application
         public void Configure(EntityTypeBuilder<Address> builder)
         {
             
+            
             builder.Property(x=>x.AddressType).IsRequired();    
-            builder.Property(x => x.AddressType).HasConversion<short>(); 
+            builder.Property(x => x.AddressType).HasConversion<short>();
             //builder.HasKey(x => new { x.AddressType });
 
             //RelationShips
             //One user can have many addresses.
-            builder.HasOne<User>(x=>x.User)
-                .WithMany(x=>x.Addresses)
-                .HasForeignKey(x => x.UserId).IsRequired();
+            builder.HasOne<User>(x => x.User)
+                .WithMany(x => x.Addresses)
+                .HasForeignKey(x => x.UserId);
 
             #region Added by Neslihan
             builder.ToTable("Addresses");

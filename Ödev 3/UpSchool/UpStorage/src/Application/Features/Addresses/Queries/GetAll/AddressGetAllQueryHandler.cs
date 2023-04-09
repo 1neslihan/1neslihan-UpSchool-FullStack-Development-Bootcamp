@@ -1,6 +1,7 @@
 ﻿using Application.Common.Interfaces;
 using Application.Features.Cities.Queries.GetAll;
 using Domain.Entities;
+using Domain.Enums;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -26,21 +27,27 @@ namespace Application.Features.Addresses.Queries.GetAll
 
             dbQuery=dbQuery.Where(x => x.CountryId == request.CountryId);
 
-            if (request.IsDeleted.HasValue) dbQuery=dbQuery.Where(x => x.IsDeleted==request.IsDeleted.Value);
+            if (request.IsDeleted.HasValue)
+            {
+                dbQuery=dbQuery.Where(x => x.IsDeleted==request.IsDeleted.Value);
+            }
+            
 
-            dbQuery=dbQuery.Include(x => x.Country);
+            dbQuery=dbQuery.Include(x => x.Country).Include(x=>x.City);
 
             var addresses = await dbQuery.ToListAsync(cancellationToken);
 
-            var addressDtos = MapAddressesToGetAllDto(addresses);
+            var addressDtos = MapAddressesToGetAllDtos(addresses);
 
             return addressDtos.ToList();
 
 
         }
 
-        private IEnumerable<AddressGetAllDto> MapAddressesToGetAllDto(List<Address> addresses)
+        private IEnumerable<AddressGetAllDto> MapAddressesToGetAllDtos(List<Address> addresses)
         {
+            List<AddressGetAllDto> addressGetAllDtos = new List<AddressGetAllDto>();
+
             foreach (var address in addresses)
             {
                 yield return new AddressGetAllDto()
@@ -48,7 +55,6 @@ namespace Application.Features.Addresses.Queries.GetAll
                     Id=address.Id,
                     Name=address.Name,
                     UserId=address.UserId,
-                    UserName=address.User.UserName,
                     CountryId=address.CountryId,
                     CountryName=address.Country.Name,
                     CityId=address.CityId,
@@ -57,6 +63,7 @@ namespace Application.Features.Addresses.Queries.GetAll
                     PostCode=address.PostCode,
                     AddressLine1=address.AddressLine1,
                     AddressLine2=address.AddressLine2,
+                    AddressType=address.AddressType.ToString(),
                     IsDeleted=address.IsDeleted,
 
                 };

@@ -271,75 +271,73 @@ namespace Infrastructure.Persistence.Migrations.Identity
                         .HasColumnType("int");
 
                     b.Property<string>("Capital")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("CreatedByUserId")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTimeOffset>("CreatedOn")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Currency")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("DeletedByUserId")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTimeOffset?>("DeletedOn")
                         .HasColumnType("datetime(6)");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("tinyint(1)");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("tinyint(1)")
+                        .HasDefaultValueSql("0");
 
                     b.Property<string>("Iso2")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("char(2)");
 
                     b.Property<string>("Iso3")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("char(3)");
 
                     b.Property<decimal?>("Latitude")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("decimal(10,8)");
 
                     b.Property<decimal?>("Longitude")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("decimal(11,8)");
 
                     b.Property<string>("ModifiedByUserId")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTimeOffset?>("ModifiedOn")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("NumericCode")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("char(3)");
 
                     b.Property<string>("PhoneCode")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Region")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("SubRegion")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("TId")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("varchar(10)");
 
                     b.Property<string>("WikiDataId")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("varchar(100)");
 
                     b.HasKey("Id");
 

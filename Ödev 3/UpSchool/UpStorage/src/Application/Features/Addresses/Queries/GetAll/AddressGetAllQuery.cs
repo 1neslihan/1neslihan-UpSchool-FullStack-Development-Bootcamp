@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Domain.Identity;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,12 @@ namespace Application.Features.Addresses.Queries.GetAll
     {
         public int CountryId { get; set; }
         public bool? IsDeleted { get; set; }
-
+        
         public AddressGetAllQuery(int countryId, bool? isDeleted) 
         {
+            
             CountryId = countryId;
-            IsDeleted=isDeleted;
+            IsDeleted = isDeleted;
         }
     }
 }

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "b7zH5/mWTvOvvQkMM5ft67DIUqSScIPo4SVTg0rU4U3dpRmFE/S9WFFHDV3NEafbrszvm1rT8PAMQTbeKN8sng==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Taslak\\UpSchool\\UpSchool.Console\\UpSchool.Console.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DL_ne\\.nuget\\packages\\restsharp\\109.0.1\\restsharp.109.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

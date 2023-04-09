@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpSchool.Domain", "UpSchool
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpSchool.Wasm", "UpSchool.Wasm\UpSchool.Wasm.csproj", "{5F0F5F68-F216-4A82-9468-B5C16CA5CBA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpStorage.Shared", "UpStorage.Shared\UpStorage.Shared.csproj", "{001864DC-ED9E-457B-9E71-D9AF52D80567}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpStorage.Shared", "UpStorage.Shared\UpStorage.Shared.csproj", "{001864DC-ED9E-457B-9E71-D9AF52D80567}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

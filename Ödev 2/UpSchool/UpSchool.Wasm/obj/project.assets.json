@@ -451,6 +451,24 @@
           }
         }
       },
+      "Shipwreck.BlazorJqueryToast/0.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.WebAssembly": "7.0.1"
+        },
+        "compile": {
+          "lib/net7.0/Shipwreck.BlazorJqueryToast.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/Shipwreck.BlazorJqueryToast.dll": {}
+        },
+        "build": {
+          "buildTransitive/Shipwreck.BlazorJqueryToast.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Shipwreck.BlazorJqueryToast.props": {}
+        }
+      },
       "System.IO.Pipelines/7.0.0": {
         "type": "package",
         "compile": {
@@ -977,6 +995,24 @@
           "lib/net7.0/Microsoft.JSInterop.WebAssembly.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Shipwreck.BlazorJqueryToast/0.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.WebAssembly": "7.0.1"
+        },
+        "compile": {
+          "lib/net7.0/Shipwreck.BlazorJqueryToast.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/Shipwreck.BlazorJqueryToast.dll": {}
+        },
+        "build": {
+          "buildTransitive/Shipwreck.BlazorJqueryToast.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Shipwreck.BlazorJqueryToast.props": {}
         }
       },
       "System.IO.Pipelines/7.0.0": {
@@ -1801,6 +1837,25 @@
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
+    "Shipwreck.BlazorJqueryToast/0.2.0": {
+      "sha512": "jwezORe80VyCc0vIdhGTf8bm8+FCcjEOt9yLjcexyjsTBI3lbKRMysWIVwjmq0TDmo0SmLDRDfozPFWMFIz8Jg==",
+      "type": "package",
+      "path": "shipwreck.blazorjquerytoast/0.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "build/Shipwreck.BlazorJqueryToast.props",
+        "buildMultiTargeting/Shipwreck.BlazorJqueryToast.props",
+        "buildTransitive/Shipwreck.BlazorJqueryToast.props",
+        "lib/net7.0-windows7.0/Shipwreck.BlazorJqueryToast.dll",
+        "lib/net7.0/Shipwreck.BlazorJqueryToast.dll",
+        "shipwreck.blazorjquerytoast.0.2.0.nupkg.sha512",
+        "shipwreck.blazorjquerytoast.nuspec",
+        "staticwebassets/Shipwreck.BlazorJqueryToast.css",
+        "staticwebassets/Shipwreck.BlazorJqueryToast.js"
+      ]
+    },
     "System.IO.Pipelines/7.0.0": {
       "sha512": "jRn6JYnNPW6xgQazROBLSfpdoczRw694vO5kKvMcNnpXuolEixUyw6IBuBs2Y2mlSX/LdLvyyWmfXhaI3ND1Yg==",
       "type": "package",
@@ -1947,6 +2002,7 @@
       "Blazored.Toast >= 4.1.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 7.0.3",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 7.0.3",
+      "Shipwreck.BlazorJqueryToast >= 0.2.0",
       "UpSchool.Domain >= 1.0.0",
       "UpStorage.Shared >= 1.0.0"
     ]
@@ -2019,6 +2075,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.3, )"
+          },
+          "Shipwreck.BlazorJqueryToast": {
+            "target": "Package",
+            "version": "[0.2.0, )"
           }
         },
         "imports": [

@@ -1,6 +1,8 @@
 {
   "cacheBootResources": true,
-  "config": [ ],
+  "config": [
+    "appsettings.json"
+  ],
   "debugBuild": true,
   "entryAssembly": "UpSchool.Wasm",
   "icuDataMode": 0,
@@ -31,6 +33,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-q4ruoDSCjV\/QJY9ZkzV6uxvEvZUVrDbyUjU3SSh5SlE=",
       "Microsoft.JSInterop.dll": "sha256-AtPkiYei2QNoRI\/hu+\/mEjfiA5MLUCSQzJJyCVNRDAA=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-p3HL4vRJ5TXVidM4+BlxP4rPXArTEzaLu21D9Ra4kYo=",
+      "Shipwreck.BlazorJqueryToast.dll": "sha256-3tzbvePd3KjsXO5lzZ5l8vzg7k0nugGvV656Z+rHU9k=",
       "System.IO.Pipelines.dll": "sha256-P\/MqD0fCBd5bgTM16JC1QC\/Zz7s+CwViyzmDFkBG4\/c=",
       "Microsoft.CSharp.dll": "sha256-OXA75L9dgx9LXJxiaIDGLfp0\/Sql7gQVlaMuI285Oq4=",
       "Microsoft.VisualBasic.Core.dll": "sha256-BVcAygeM8zz1DG96XDgbqpCdgTQpnlmukUmHZH0y5Ng=",
@@ -200,17 +203,17 @@
       "mscorlib.dll": "sha256-kgowZLZGyceaJo4bHvVY1kmm1GJuawa5rPO1RCfNYWc=",
       "netstandard.dll": "sha256-2\/SuexPFW8hizUgbgPcchYHfG\/zmGzzMN6ESSyefPRQ=",
       "System.Private.CoreLib.dll": "sha256-mcywrbK0VZXiOvZ4dxU1ocaPZFplCRSIPQ\/wFikcrus=",
-      "UpSchool.Domain.dll": "sha256-wnxE3BZpZ+RU\/tF4J+pnEvwJjk28d\/yV9dPebn3vYOg=",
-      "UpStorage.Shared.dll": "sha256-jA\/fazTA4hsLrzoTZjzKZ064gUHkIgSdXMRMMnH+0FU=",
-      "UpSchool.Wasm.dll": "sha256-zuV3xLagYkgYy7n4GnmD30v+gl\/AuRuMRJEmu1YtxQE="
+      "UpSchool.Domain.dll": "sha256-+5mqsiqofZON3ObebrVih5ttU48V6h7KOaq5nNKCWPs=",
+      "UpStorage.Shared.dll": "sha256-qOoidd3WE3dwrLUwKoxg0VI2F244b0vveLMUtC7JJKY=",
+      "UpSchool.Wasm.dll": "sha256-eC1gb550wKV3J+sfXN4chafv7k80OjbydRKeyUt13HI="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "UpSchool.Domain.pdb": "sha256-VHty1jGxbwP41trbERiAe1e4mgjm\/NS7b6X7w7WOLHc=",
-      "UpStorage.Shared.pdb": "sha256-IqmbLsgX0UVreEiV5dCwGBwErZFuRgzfsDCITDO1DCM=",
-      "UpSchool.Wasm.pdb": "sha256-8bZdmvsiXxLp3hFiFkI2Er0G+\/kCOtPxHzpwU\/JwUUk="
+      "UpSchool.Domain.pdb": "sha256-a1ygbfWWC4TXH0L2018d4p6hVPlzLAmjmn7LROK44\/M=",
+      "UpStorage.Shared.pdb": "sha256-ZxmcZfjRoq0SMENEqZRhidon3C0i7KyIbBLZfeWuvrs=",
+      "UpSchool.Wasm.pdb": "sha256-8gHNFhAIf0F9z6ois0e\/nwBO7C8\/DNbFgIfX\/8KYai0="
     },
     "runtime": {
       "dotnet.7.0.3.c43kwsx7mz.js": "sha256-DxGvmbtUa6hGJpk3VyMEbkPZ653qWbQkh8X4ZVM9TWM=",

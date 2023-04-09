@@ -1,0 +1,24 @@
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Domain\bin\Debug\net7.0\UpSchool.Domain.deps.json
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Domain\bin\Debug\net7.0\UpSchool.Domain.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Domain\bin\Debug\net7.0\UpSchool.Domain.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Domain\obj\Debug\net7.0\UpSchool.Domain.csproj.AssemblyReference.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Domain\obj\Debug\net7.0\UpSchool.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Domain\obj\Debug\net7.0\UpSchool.Domain.AssemblyInfoInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Domain\obj\Debug\net7.0\UpSchool.Domain.AssemblyInfo.cs
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Domain\obj\Debug\net7.0\UpSchool.Domain.csproj.CoreCompileInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Domain\obj\Debug\net7.0\UpSchool.Domain.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Domain\obj\Debug\net7.0\refint\UpSchool.Domain.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Domain\obj\Debug\net7.0\UpSchool.Domain.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Domain\obj\Debug\net7.0\ref\UpSchool.Domain.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Domain\bin\Debug\net7.0\UpSchool.Domain.deps.json
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Domain\bin\Debug\net7.0\UpSchool.Domain.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Domain\bin\Debug\net7.0\UpSchool.Domain.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Domain\obj\Debug\net7.0\UpSchool.Domain.csproj.AssemblyReference.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Domain\obj\Debug\net7.0\UpSchool.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Domain\obj\Debug\net7.0\UpSchool.Domain.AssemblyInfoInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Domain\obj\Debug\net7.0\UpSchool.Domain.AssemblyInfo.cs
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Domain\obj\Debug\net7.0\UpSchool.Domain.csproj.CoreCompileInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Domain\obj\Debug\net7.0\UpSchool.Domain.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Domain\obj\Debug\net7.0\refint\UpSchool.Domain.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Domain\obj\Debug\net7.0\UpSchool.Domain.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Domain\obj\Debug\net7.0\ref\UpSchool.Domain.dll

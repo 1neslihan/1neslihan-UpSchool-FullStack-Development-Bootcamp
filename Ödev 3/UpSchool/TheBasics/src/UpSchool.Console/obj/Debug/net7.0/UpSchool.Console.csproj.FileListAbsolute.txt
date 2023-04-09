@@ -1,0 +1,32 @@
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.exe
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.deps.json
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.runtimeconfig.json
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.csproj.AssemblyReference.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.AssemblyInfoInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.AssemblyInfo.cs
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.csproj.CoreCompileInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\refint\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.genruntimeconfig.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\ref\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.exe
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.deps.json
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.runtimeconfig.json
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\bin\Debug\net7.0\RestSharp.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.csproj.AssemblyReference.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.AssemblyInfoInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.AssemblyInfo.cs
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.csproj.CoreCompileInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.csproj.CopyComplete
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\refint\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.genruntimeconfig.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\ref\UpSchool.Console.dll

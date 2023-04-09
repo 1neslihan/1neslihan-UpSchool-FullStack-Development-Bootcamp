@@ -1,13 +1,31 @@
 ﻿@page "/"
+@using UpSchool.Domain.Services
+@using UpSchool.Wasm.Common.Utilities;
 @inject NavigationManager NavigationManager
+@inject IToasterService ToastService
+@inject IUrlHelperService UrlHelperService
 <PageTitle>Index</PageTitle>
 
 <h1>Welcome!</h1>
-
+<p>@TitanicUrl</p>
 <p>Welcome to password generator.</p>
 
 <button class="btn btn-dark" @onclick="@(()=> NavigationManager.NavigateTo($"/passwordGenerator/{Length}"))"> Navigate to Key Page</button>
 
 @code{
     public string Length = "25";
+    public string TitanicUrl { get; set; }
+    public ConsoleLogger ConsoleLogger;
+    public ToasterLogger ToasterLogger;
+
+    protected override void OnInitialized()
+    {
+        ConsoleLogger= new ConsoleLogger(UrlHelperService.ApiUrl);
+        ToasterLogger = new ToasterLogger(ToastService, UrlHelperService.ApiUrl);
+        ToasterLogger.Log("Component is being initialized");
+        ConsoleLogger.Log("Component is being initialized");
+        TitanicUrl = UrlHelperService.ApiUrl;
+        base.OnInitialized();
+    }
+
 }

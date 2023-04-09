@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aRVP2dvBxPVDhEdPpFX3eEUY/g1qFizo5ng46HhqNKi5tkoIesOjR8JGEX/yhi3sx64vNkNLuT20Pb3C9Sp5Xg==",
+  "dgSpecHash": "4zg1DkNiyNKhsbS42jcs9Kozs+fso2GhMp0ranRsorB19bD28blndHGfFWac1a98WtEL+ZVHYfB1MbCiXmKTPA==",
   "success": true,
   "projectFilePath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 2\\UpSchool\\UpSchool.Wasm\\UpSchool.Wasm.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,7 @@
     "C:\\Users\\DL_ne\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\DL_ne\\.nuget\\packages\\microsoft.jsinterop\\7.0.3\\microsoft.jsinterop.7.0.3.nupkg.sha512",
     "C:\\Users\\DL_ne\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.3\\microsoft.jsinterop.webassembly.7.0.3.nupkg.sha512",
+    "C:\\Users\\DL_ne\\.nuget\\packages\\shipwreck.blazorjquerytoast\\0.2.0\\shipwreck.blazorjquerytoast.0.2.0.nupkg.sha512",
     "C:\\Users\\DL_ne\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\DL_ne\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\DL_ne\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",

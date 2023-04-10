@@ -41,7 +41,6 @@ namespace Application.Features.Addresses.Commands.Update
                 address.AddressLine1=request.AddressLine1;
                 address.AddressLine2=request.AddressLine2;
                 address.AddressType=request.AddressType;
-                address.CreatedOn=DateTimeOffset.Now;
                 address.ModifiedOn=DateTimeOffset.Now;
                 address.CreatedByUserId=null;
                 address.IsDeleted=false;

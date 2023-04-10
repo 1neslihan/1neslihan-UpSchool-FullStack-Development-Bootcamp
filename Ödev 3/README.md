@@ -90,5 +90,8 @@ Folders and files.
 
 #
 <h3>My web Api look like this<h3>
-![image](https://user-images.githubusercontent.com/30401423/230913692-6ba56554-9507-46bb-89cc-7c4ea54b1a27.png)
+
+  ![tempsnip](https://user-images.githubusercontent.com/30401423/230914655-c05415c0-f796-48f2-9be0-e03834b101d9.png)
+
+  
 

@@ -1,5 +1,5 @@
 # Password Manager Webassembly
-<h4> This is a UpSchool team sample project on progress.</h4>
+<h4> This is an UpSchool team sample project on progress.</h4>
 <p>In this project our goal is accomplish the manage of our personal infos like social media account passwords, credit card infos, personal notes, our addresses and generate strong passwords.</p>
 <p>Also we are using  jasontaylordev's clean architecture repository to help us getting a simple and understandable software architecture to our own project.</p>
 

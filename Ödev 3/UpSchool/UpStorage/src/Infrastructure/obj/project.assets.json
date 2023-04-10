@@ -2455,11 +2455,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Taslak\\UpSchool\\UpStorage\\src\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 3\\UpSchool\\UpStorage\\src\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Taslak\\UpSchool\\UpStorage\\src\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 3\\UpSchool\\UpStorage\\src\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\DL_ne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Taslak\\UpSchool\\UpStorage\\src\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 3\\UpSchool\\UpStorage\\src\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2481,8 +2481,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Taslak\\UpSchool\\UpStorage\\src\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Taslak\\UpSchool\\UpStorage\\src\\Application\\Application.csproj"
+            "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 3\\UpSchool\\UpStorage\\src\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 3\\UpSchool\\UpStorage\\src\\Application\\Application.csproj"
             }
           }
         }

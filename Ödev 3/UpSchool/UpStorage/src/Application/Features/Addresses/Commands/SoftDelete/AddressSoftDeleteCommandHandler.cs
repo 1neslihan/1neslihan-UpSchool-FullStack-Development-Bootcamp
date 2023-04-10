@@ -32,6 +32,9 @@ namespace Application.Features.Addresses.Commands.SoftDelete
             else
             {
                 address.IsDeleted= true;
+                address.DeletedOn = DateTimeOffset.Now;
+                address.ModifiedOn = DateTimeOffset.Now;
+                address.DeletedByUserId=request.Id.ToString();
                 await _applicationDbContext.SaveChangesAsync(cancellationToken);
                 return new Response<Guid>("The address was successfully deleted.");
             }

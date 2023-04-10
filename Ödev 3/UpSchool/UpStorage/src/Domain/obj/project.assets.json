@@ -588,11 +588,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Taslak\\UpSchool\\UpStorage\\src\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 3\\UpSchool\\UpStorage\\src\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Taslak\\UpSchool\\UpStorage\\src\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 3\\UpSchool\\UpStorage\\src\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\DL_ne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Taslak\\UpSchool\\UpStorage\\src\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 3\\UpSchool\\UpStorage\\src\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -34,13 +34,13 @@ namespace Application.Features.Addresses.Commands.Add
                 AddressLine2=request.AddressLine2,
                 AddressType=request.AddressType,
                 CreatedOn=DateTimeOffset.Now,
-                CreatedByUserId=null,
+                CreatedByUserId=request.UserId,
                 IsDeleted=false,
             };
 
             await _applicationDbContext.Addresses.AddAsync(address, cancellationToken);
             await _applicationDbContext.SaveChangesAsync(cancellationToken);
-            return new Response<Guid>($"The new adress \"{address.Name}\" was edited succesfully.", address.Id);
+            return new Response<Guid>($"The new adress {address.Name} was added succesfully.", address.Id);
         }
     }
 }

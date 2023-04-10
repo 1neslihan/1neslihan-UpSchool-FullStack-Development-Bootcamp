@@ -6120,11 +6120,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Taslak\\UpSchool\\UpStorage\\tests\\Application.IntegrationTests\\Application.IntegrationTests.csproj",
+      "projectUniqueName": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 3\\UpSchool\\UpStorage\\tests\\Application.IntegrationTests\\Application.IntegrationTests.csproj",
       "projectName": "Application.IntegrationTests",
-      "projectPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Taslak\\UpSchool\\UpStorage\\tests\\Application.IntegrationTests\\Application.IntegrationTests.csproj",
+      "projectPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 3\\UpSchool\\UpStorage\\tests\\Application.IntegrationTests\\Application.IntegrationTests.csproj",
       "packagesPath": "C:\\Users\\DL_ne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Taslak\\UpSchool\\UpStorage\\tests\\Application.IntegrationTests\\obj\\",
+      "outputPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\UpSchool-FullStack-Development-Bootcamp\\Ödev 3\\UpSchool\\UpStorage\\tests\\Application.IntegrationTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

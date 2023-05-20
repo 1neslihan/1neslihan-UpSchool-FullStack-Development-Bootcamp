@@ -1,0 +1,69 @@
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.exe
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.deps.json
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.runtimeconfig.json
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.csproj.AssemblyReference.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.AssemblyInfoInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.AssemblyInfo.cs
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.csproj.CoreCompileInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\refint\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.genruntimeconfig.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\UpSchool-FullStack-Development-Bootcamp\Ödev 2\UpSchool\UpSchool.Console\obj\Debug\net7.0\ref\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.exe
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.deps.json
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.runtimeconfig.json
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\bin\Debug\net7.0\RestSharp.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.csproj.AssemblyReference.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.AssemblyInfoInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.AssemblyInfo.cs
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.csproj.CoreCompileInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.csproj.CopyComplete
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\refint\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.genruntimeconfig.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\UpSchool.Console\obj\Debug\net7.0\ref\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.exe
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.deps.json
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.runtimeconfig.json
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\UpSchool.Console.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\RestSharp.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\UpSchool.Domain.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\UpSchool.Domain.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.csproj.AssemblyReference.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.AssemblyInfoInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.AssemblyInfo.cs
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.csproj.CoreCompileInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.csproj.CopyComplete
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\obj\Debug\net7.0\refint\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\obj\Debug\net7.0\UpSchool.Console.genruntimeconfig.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\obj\Debug\net7.0\ref\UpSchool.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\SQLite-net.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\SQLitePCLRaw.nativelibrary.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\SQLitePCLRaw.core.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\runtimes\alpine-x64\native\libe_sqlite3.so
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Taslak\UpSchool\TheBasics\UpSchool.Console\bin\Debug\net7.0\runtimes\win-x86\native\e_sqlite3.dll

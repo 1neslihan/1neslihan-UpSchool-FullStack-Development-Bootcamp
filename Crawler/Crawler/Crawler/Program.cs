@@ -1,159 +1,256 @@
-﻿using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium;
-using WebDriverManager.DriverConfigs.Impl;
-using WebDriverManager;
-using static System.Collections.Specialized.BitVector32;
-using OpenQA.Selenium.Support.UI;
-using System.Collections.ObjectModel;
+﻿using Application.Features.OrderEvents.Commands.Add;
 using Application.Features.Orders.Commands.Add;
-using Domain.Enums;
-using AngleSharp.Dom;
-using Newtonsoft.Json;
-using System.Text;
 using Application.Features.Products.Commands.Add;
+using Domain.Dtos;
+using Domain.Enums;
+using Microsoft.AspNetCore.SignalR.Client;
+using Newtonsoft.Json;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using System.Collections.ObjectModel;
+using System.Security.AccessControl;
+using System.Text;
+using WebDriverManager;
+using WebDriverManager.DriverConfigs.Impl;
 
-Console.WriteLine("Crawler_Bot");
+
+bool Continue=false;
+
+using var httpClient = new HttpClient();
+
+//var hubConnection=new HubConnectionBuilder()
+//    .WithUrl($"https://localhost:7090/Hubs/UserLogHub")
+//    .WithAutomaticReconnect()
+//    .Build();
+
+//await hubConnection.StartAsync();
 
 
 new DriverManager().SetUpDriver(new ChromeConfig());
 
+while (!Continue)   
+{
+    
+    Console.WriteLine("Crawler_Bot");
 
-using var httpClient = new HttpClient();
 
-IWebDriver driver = new ChromeDriver();
+
+
+    IWebDriver driver = new ChromeDriver();
 
 
     Console.Clear();
-    
-    Console.WriteLine("Giriş Yapıldı------------------------------------");
-    driver.Navigate().GoToUrl("https://finalproject.dotnet.gg");
-    ReadOnlyCollection<IWebElement> pagination = driver.FindElements(By.ClassName("page-item"));
 
-    int a = 0; //ürün sayısı tutucu
-    
-    //yeni bir order oluşturup apiye istek yap
-    var orderAddRequest = new OrderAddCommand()
+
+    var orderAddRequest = new OrderAddCommand();
+    ConsoleKeyInfo keyInfo = new ConsoleKeyInfo();
+
+    bool validChoice = false;
+    while (!validChoice)
     {
-        Id=Guid.NewGuid(),
-        ProductCrawlType=ProductCrawlType.All,
-    };
+        Console.WriteLine("Hangi tip ürünleri kazımak istiyorsunuz?");
+        Console.WriteLine("1- Hepsi");
+        Console.WriteLine("2- İndirimdekiler");
+        Console.WriteLine("3- İndirimde olmayanlar");
+        keyInfo = Console.ReadKey();
+        Console.WriteLine();
+
+        switch (keyInfo.Key)
+        {
+            case ConsoleKey.D1:
+            case ConsoleKey.NumPad1:
+                orderAddRequest= new OrderAddCommand()
+                {
+                    Id=Guid.NewGuid(),
+                    ProductCrawlType=ProductCrawlType.All,
+                };
+                validChoice=true;
+                break;
+            case ConsoleKey.D2:
+            case ConsoleKey.NumPad2:
+                orderAddRequest= new OrderAddCommand()
+                {
+                    Id=Guid.NewGuid(),
+                    ProductCrawlType=ProductCrawlType.OnDiscount,
+                };
+                validChoice=true;
+                break;
+            case ConsoleKey.D3:
+            case ConsoleKey.NumPad3:
+                orderAddRequest= new OrderAddCommand()
+                {
+                    Id=Guid.NewGuid(),
+                    ProductCrawlType=ProductCrawlType.NonDiscount,
+                };
+                validChoice=true;
+                break;
+            default:
+                Console.WriteLine("Geçersiz seçenek");
+                Thread.Sleep(1500);
+                Console.Clear();
+                break;
+        }
+    }
+
+
+
+
 
     var orderAddResponse = await SendHttpPostRequest<OrderAddCommand, object>(httpClient, "https://localhost:7090/api/Orders/Add", orderAddRequest);
     Guid orderId = orderAddRequest.Id;
-    
-    
+    //await hubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog("New order generated"));
+    await SendLogNotification("New order generated");
+    //Order event bot started oluşturulup signalR'a mesaj olarak geçildi.
+    var orderEventAddRequest = new OrderEventAddCommand()
+    {
+        OrderId= orderId,
+        Status=OrderStatus.BotStarted,
+    };
+
+    var orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest);
+
+    //SignalR ile verileri hub'a gönderme
+    //await hubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog(orderEventAddRequest.Status.ToString()));
+    await SendLogNotification(orderEventAddRequest.Status.ToString());
+
+
+    driver.Navigate().GoToUrl("https://finalproject.dotnet.gg");
+    ReadOnlyCollection<IWebElement> pagination = driver.FindElements(By.ClassName("page-item"));
+
+    int productCounter = 0; //ürün sayısı tutucu
     
 
-    for (int i=1; i<pagination.Count; i++)
+    orderEventAddRequest = new OrderEventAddCommand()
+    {
+        OrderId= orderId,
+        Status=OrderStatus.CrawlingStarted,
+    };
+
+    orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest);
+    Console.WriteLine(orderEventAddRequest.Status.ToString() +" "+ DateTimeOffset.Now);
+
+    for (int i = 1; i<pagination.Count; i++)
     {
         driver.Navigate().GoToUrl($"https://finalproject.dotnet.gg/?currentPage={i}");
         Console.WriteLine($"{i}.Sayfa");
         Console.WriteLine();
         driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);
         ReadOnlyCollection<IWebElement> productCard = driver.FindElements(By.CssSelector(".col.mb-5"));
-        Console.WriteLine(productCard.Count);
-        
-        
+        //Console.WriteLine(productCard.Count);
+        int howMany = 0;
 
-    if (orderAddResponse != null)
-    {
-        for (int j = 1; j<=productCard.Count; j++)
+
+        if (orderAddResponse != null)
         {
-            string productName = string.Empty;
-            string productImageURL = driver.FindElement(By.XPath($"/html/body/section/div/div/div[{j}]/div/img")).GetAttribute("src");
-            bool isDiscounted;
+            for (int j = 1; j<=productCard.Count; j++)
+            {
+                string productName = string.Empty;
+                string productImageURL = driver.FindElement(By.XPath($"/html/body/section/div/div/div[{j}]/div/img")).GetAttribute("src");
+                bool isDiscounted;
 
 
-            ReadOnlyCollection<IWebElement> elements = driver.FindElements(By.XPath($"/html/body/section/div/div/div[{j}]/div/div[2]/div/span[2]"));
-            if (elements.Count == 0)
-            {
-                isDiscounted = false;
-               
-            }
-            else
-            {
-                isDiscounted = true;
-                
-            }
-            
-            decimal? discountedPrice = null;
-            decimal originalPrice;
-          
-            if (isDiscounted)
-            {
-                productName = driver.FindElement(By.XPath($"/html/body/section/div/div/div[{j}]/div/div[2]/div/h5")).Text;
-                discountedPrice =decimal.Parse(driver.FindElement(By.XPath($"/html/body/section/div/div/div[{j}]/div/div[2]/div/span[2]")).Text.Remove(0, 1));
-                originalPrice = decimal.Parse(driver.FindElement(By.XPath($"/html/body/section/div/div/div[{j}]/div/div[2]/div/span[1]")).Text.Remove(0, 1));
-                a++;
-            }
-            else
-            {
-                productName = driver.FindElement(By.XPath($"/html/body/section/div/div/div[{j}]/div/div[1]/div/h5")).Text;
-                originalPrice =decimal.Parse(driver.FindElement(By.XPath($"/html/body/section/div/div/div[{j}]/div/div[1]/div/span")).Text.Remove(0, 1));
-                a++;
-            }
-
-            //Daha sonra silinecek
-            Console.WriteLine("----------------------------");
-
-            if (isDiscounted)
-            {
-                Console.WriteLine("Ürün Adı: " + productName);
-                Console.WriteLine("İndirimli mi?: " + isDiscounted);
-                Console.WriteLine("İndirimli Fiyat: " + discountedPrice);
-                Console.WriteLine("İndirimsiz Fiyat: " + originalPrice);
-                Console.WriteLine("Ürün Resmi URL'si: " + productImageURL);
-                Console.WriteLine("Ürün OrderId'si " + orderAddRequest.Id.ToString());
-                var productAddRequest = new ProductAddCommand()
+                ReadOnlyCollection<IWebElement> elements = driver.FindElements(By.XPath($"/html/body/section/div/div/div[{j}]/div/div[2]/div/span[2]"));
+                if (elements.Count == 0)
                 {
-                    
-                    OrderId =orderAddRequest.Id,
-                    Name = productName,
-                    Picture=productImageURL,
-                    IsOnSale = true,
-                    Price=originalPrice,
-                    SalePrice=discountedPrice,   
+                    isDiscounted = false;
 
-                };
-               
-                var productAddResponse =await SendHttpPostRequest<ProductAddCommand, object>(httpClient, "https://localhost:7090/api/Products/Add", productAddRequest);
-                Console.WriteLine($"Product order ıd{productAddRequest.OrderId}");
-
-            }
-            else
-            {
-                Console.WriteLine("Ürün Adı: " + productName);
-                Console.WriteLine("İndirimli mi?: " + isDiscounted);
-                Console.WriteLine("İndirimsiz Fiyat: " + originalPrice);
-                Console.WriteLine("Ürün Resmi URL'si: " + productImageURL);
-
-                var productAddRequest = new ProductAddCommand()
+                }
+                else
                 {
-                    // ProductAddCommand nesnesinin diğer özellikleri
-                    OrderId =orderAddRequest.Id,
-                    Name = productName,
-                    IsOnSale = true,
-                    Price=originalPrice,
-                    SalePrice=discountedPrice,
-                    Picture=productImageURL,
+                    isDiscounted = true;
 
-                };
-                
-                var productAddResponse =await SendHttpPostRequest<ProductAddCommand, object>(httpClient, "https://localhost:7090/api/Products/Add", productAddRequest);
+                }
+
+                decimal? discountedPrice = null;
+                decimal originalPrice;
+
+                if (isDiscounted && (keyInfo.Key==ConsoleKey.D1 || keyInfo.Key==ConsoleKey.NumPad1 || keyInfo.Key== ConsoleKey.D2 || keyInfo.Key==ConsoleKey.NumPad2))
+                {
+                    productName = driver.FindElement(By.XPath($"/html/body/section/div/div/div[{j}]/div/div[2]/div/h5")).Text;
+                    discountedPrice =decimal.Parse(driver.FindElement(By.XPath($"/html/body/section/div/div/div[{j}]/div/div[2]/div/span[2]")).Text.Remove(0, 1));
+                    originalPrice = decimal.Parse(driver.FindElement(By.XPath($"/html/body/section/div/div/div[{j}]/div/div[2]/div/span[1]")).Text.Remove(0, 1));
+                    Console.WriteLine("Ürün Adı: " + productName);
+                    Console.WriteLine("İndirimli mi?: " + isDiscounted);
+                    Console.WriteLine("İndirimli Fiyat: " + discountedPrice);
+                    Console.WriteLine("İndirimsiz Fiyat: " + originalPrice);
+                    Console.WriteLine("Ürün Resmi URL'si: " + productImageURL);
+                    Console.WriteLine("Ürün OrderId'si " + orderAddRequest.Id.ToString());
+                    Console.WriteLine("----------------------------");
+                    var productAddRequest = new ProductAddCommand()
+                    {
+
+                        OrderId =orderAddRequest.Id,
+                        Name = productName,
+                        Picture=productImageURL,
+                        IsOnSale = true,
+                        Price=originalPrice,
+                        SalePrice=discountedPrice,
+
+                    };
+
+                    var productAddResponse = await SendHttpPostRequest<ProductAddCommand, object>(httpClient, "https://localhost:7090/api/Products/Add", productAddRequest);
+                    productCounter++;
+                    howMany++;
+                }
+                else if (!isDiscounted && (keyInfo.Key==ConsoleKey.D1 || keyInfo.Key==ConsoleKey.NumPad1 || keyInfo.Key==ConsoleKey.D3 || keyInfo.Key==ConsoleKey.NumPad3))
+                {
+                    productName = driver.FindElement(By.XPath($"/html/body/section/div/div/div[{j}]/div/div[1]/div/h5")).Text;
+                    originalPrice =decimal.Parse(driver.FindElement(By.XPath($"/html/body/section/div/div/div[{j}]/div/div[1]/div/span")).Text.Remove(0, 1));
+                    Console.WriteLine("Ürün Adı: " + productName);
+                    Console.WriteLine("İndirimli mi?: " + isDiscounted);
+                    Console.WriteLine("İndirimsiz Fiyat: " + originalPrice);
+                    Console.WriteLine("Ürün Resmi URL'si: " + productImageURL);
+                    Console.WriteLine("----------------------------");
+
+                    var productAddRequest = new ProductAddCommand()
+                    {
+                        // ProductAddCommand nesnesinin diğer özellikleri
+                        OrderId =orderAddRequest.Id,
+                        Name = productName,
+                        IsOnSale = true,
+                        Price=originalPrice,
+                        SalePrice=discountedPrice,
+                        Picture=productImageURL,
+
+                    };
+
+                    var productAddResponse = await SendHttpPostRequest<ProductAddCommand, object>(httpClient, "https://localhost:7090/api/Products/Add", productAddRequest);
+                    productCounter++;
+                    howMany++;
+                }
+
+
+
+
 
             }
-
+            Console.WriteLine($"{productCard.Count} element found. {howMany} of them is scrapped");
             Console.WriteLine();
             Console.WriteLine();
         }
+
+
     }
-            
-        
+
+
+    Console.WriteLine(productCounter);
+    Console.WriteLine("Do you want to continue scrapping? (y/n)");
+    ConsoleKeyInfo ContinueScrapping=Console.ReadKey();
+    if (ContinueScrapping.Key==ConsoleKey.Y)
+    {
+        driver.Dispose();
+        Console.WriteLine();
+        Console.WriteLine();
+    }
+    else if(ContinueScrapping.Key==ConsoleKey.N)
+    {
+        driver.Dispose();
+        httpClient.Dispose ();
+        Continue=true;
     }
     
     
-    Console.WriteLine(a);
-    driver.Dispose();
+}
 
 
 async Task<TResponse> SendHttpPostRequest<TRequest, TResponse>(HttpClient httpClient, string url, TRequest payload)
@@ -166,7 +263,30 @@ async Task<TResponse> SendHttpPostRequest<TRequest, TResponse>(HttpClient httpCl
 
     var jsonResponse = await response.Content.ReadAsStringAsync();
     var responseObject = JsonConvert.DeserializeObject<TResponse>(jsonResponse);
-    Console.WriteLine($"Response: {responseObject}");
+    //Console.WriteLine($"Response: {responseObject}");
 
     return responseObject;
+}
+
+UserLogDto CreateLog(string message) => new UserLogDto(message);
+
+async Task SendLogNotification(string logMessage)
+{
+    // 'CreateLog' metodu burada kullanılarak bir günlük oluşturulabilir
+    var log = CreateLog(logMessage);
+
+    // HubConnection oluşturulmalı ve başlatılmalı
+    var hubConnection = new HubConnectionBuilder()
+        .WithUrl("https://localhost:7090/Hubs/UserLogHub") // Hub URL'sini burada belirtmelisiniz
+        .Build();
+
+    try
+    {
+        await hubConnection.StartAsync(); // HubConnection'ı başlatma
+        await hubConnection.InvokeAsync("SendLogNotificationAsync", log); // Metodu çağırma
+    }
+    finally
+    {
+        await hubConnection.DisposeAsync(); // HubConnection'ı kapatma ve kaynakları temizleme
+    }
 }

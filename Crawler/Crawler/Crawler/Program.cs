@@ -26,22 +26,12 @@ using var httpClient = new HttpClient();
 //await hubConnection.StartAsync();
 
 
-new DriverManager().SetUpDriver(new ChromeConfig());
+//new DriverManager().SetUpDriver(new ChromeConfig());
 
 while (!Continue)   
 {
     
     Console.WriteLine("Crawler_Bot");
-
-
-
-
-    IWebDriver driver = new ChromeDriver();
-
-
-    Console.Clear();
-
-
     var orderAddRequest = new OrderAddCommand();
     ConsoleKeyInfo keyInfo = new ConsoleKeyInfo();
 
@@ -100,6 +90,11 @@ while (!Continue)
     Guid orderId = orderAddRequest.Id;
     //await hubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog("New order generated"));
     await SendLogNotification("New order generated");
+
+    new DriverManager().SetUpDriver(new ChromeConfig());
+    IWebDriver driver = new ChromeDriver();
+    Console.Clear();
+
     //Order event bot started oluşturulup signalR'a mesaj olarak geçildi.
     var orderEventAddRequest = new OrderEventAddCommand()
     {
@@ -112,6 +107,8 @@ while (!Continue)
     //SignalR ile verileri hub'a gönderme
     //await hubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog(orderEventAddRequest.Status.ToString()));
     await SendLogNotification(orderEventAddRequest.Status.ToString());
+
+    
 
 
     driver.Navigate().GoToUrl("https://finalproject.dotnet.gg");
@@ -127,7 +124,7 @@ while (!Continue)
     };
 
     orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest);
-    Console.WriteLine(orderEventAddRequest.Status.ToString() +" "+ DateTimeOffset.Now);
+    await SendLogNotification(orderEventAddRequest.Status.ToString());
 
     for (int i = 1; i<pagination.Count; i++)
     {
@@ -228,12 +225,39 @@ while (!Continue)
             Console.WriteLine();
             Console.WriteLine();
         }
+        else
+        {
+            orderEventAddRequest = new OrderEventAddCommand()
+            {
+                OrderId= orderId,
+                Status=OrderStatus.CrawlingFailed,
+            };
+            orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest);
+
+            await SendLogNotification(orderEventAddRequest.Status.ToString());
+        }
+            
 
 
     }
+    orderEventAddRequest = new OrderEventAddCommand()
+    {
+        OrderId= orderId,
+        Status=OrderStatus.CrawlingCompleted,
+    };
+    orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest);
 
+    await SendLogNotification(orderEventAddRequest.Status.ToString());
 
     Console.WriteLine(productCounter);
+    orderEventAddRequest = new OrderEventAddCommand()
+    {
+        OrderId= orderId,
+        Status=OrderStatus.OrderCompleted,
+    };
+    orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest);
+    await SendLogNotification(orderEventAddRequest.Status.ToString());
+
     Console.WriteLine("Do you want to continue scrapping? (y/n)");
     ConsoleKeyInfo ContinueScrapping=Console.ReadKey();
     if (ContinueScrapping.Key==ConsoleKey.Y)
@@ -241,12 +265,22 @@ while (!Continue)
         driver.Dispose();
         Console.WriteLine();
         Console.WriteLine();
+
+
     }
     else if(ContinueScrapping.Key==ConsoleKey.N)
     {
+        orderEventAddRequest = new OrderEventAddCommand()
+        {
+            OrderId= orderId,
+            Status=OrderStatus.BotClosed,
+        };
+        orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest);
+        await SendLogNotification(orderEventAddRequest.Status.ToString());
         driver.Dispose();
         httpClient.Dispose ();
         Continue=true;
+        
     }
     
     
@@ -278,6 +312,7 @@ async Task SendLogNotification(string logMessage)
     // HubConnection oluşturulmalı ve başlatılmalı
     var hubConnection = new HubConnectionBuilder()
         .WithUrl("https://localhost:7090/Hubs/UserLogHub") // Hub URL'sini burada belirtmelisiniz
+        .WithAutomaticReconnect()
         .Build();
 
     try

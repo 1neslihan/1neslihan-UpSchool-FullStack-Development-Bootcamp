@@ -3,19 +3,24 @@
 @using Microsoft.AspNetCore.SignalR.Client;
 @inject HttpClient httpClient;
 <h3>CrawlerInterface</h3>
+<div class="row">
+    <div class="col-lg-4">
+        <div class=fakeMenu>
+            <div class="fakeButtons fakeClose"></div>
+            <div class="fakeButtons fakeMinimize"></div>
+            <div class="fakeButtons fakeZoom"></div>
+        </div>
+        <div class="fakeScreen">
+            @foreach (var log in logs)
+            {
+                <p class="line1">@log.Message <span class="cursor4f">@log.SendOn.ToString("g")</span></p>
+            }
 
-<div class=fakeMenu>
-    <div class="fakeButtons fakeClose"></div>
-    <div class="fakeButtons fakeMinimize"></div>
-    <div class="fakeButtons fakeZoom"></div>
+        </div>
+    </div>
+    
 </div>
-<div class="fakeScreen">
-    @foreach(var log in logs)
-    {
-        <p class="line1">@log.Message <span class="cursor4f">@log.SendOn.ToString("g")</span></p>
-    }
-   
-</div>
+
 
 @code {
     private List<UserLogDto> logs = new List<UserLogDto>();
@@ -42,7 +47,7 @@
 
 <style>
     body {
-        background-color: #272727;
+        background-color: #F1D4E5;
         padding: 10px;
     }
 
@@ -72,29 +77,30 @@
     }
 
     .fakeMenu {
-        width: 350px;
+        width: 100%;
         box-sizing: border-box;
         height: 25px;
         background-color: #bbb;
-        margin: 0 auto;
+        /*margin: 0 auto;*/
         border-top-right-radius: 5px;
         border-top-left-radius: 5px;
     }
 
     .fakeScreen {
-        background-color: #151515;
+        background-color: #16213E;
         box-sizing: border-box;
-        width: 350px;
-        margin: 0 auto;
+        width: 100%;
+        /*margin: 0 auto;*/
         padding: 20px;
+        opacity: 0.8;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
     }
 
     p {
-        position: relative;
-        left: 50%;
-        margin-left: -8.5em;
+        position: static;
+        /*left: 50%;*/
+        /*margin-left: -8.5em;*/
         text-align: left;
         font-size: 1.25em;
         font-family: monospace;
@@ -109,7 +115,7 @@
     }
 
     .line1 {
-        color: #9CD9F0;
+        color: #16FF00;
         -webkit-animation: type .5s 1s steps(20, end) forwards;
         -moz-animation: type .5s 1s steps(20, end) forwards;
         -o-animation: type .5s 1s steps(20, end) forwards;
@@ -258,25 +264,25 @@
 
     @@-webkit-keyframes type {
         to {
-            width: 17em;
+            width: 100%;
         }
     }
 
     @@-moz-keyframes type {
         to {
-            width: 17em;
+            width: 100%;
         }
     }
 
     @@-o-keyframes type {
         to {
-            width: 17em;
+            width: 100%;
         }
     }
 
     @@keyframes type {
         to {
-            width: 17em;
+            width: 100%;
         }
     }
 </style>

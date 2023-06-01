@@ -26,7 +26,9 @@ namespace Infrastructure.Persistence.Configurations.Application
                 .HasConversion<int>();
 
             //CreatedOn
-            builder.Property(x => x.CreatedOn).IsRequired();
+            builder.Property(x => x.CreatedOn)
+                .IsRequired()
+                .ValueGeneratedOnAdd();
 
             //ModifiedOn
             builder.Property(x => x.ModifiedOn).IsRequired(false);

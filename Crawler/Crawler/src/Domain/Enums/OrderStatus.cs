@@ -16,6 +16,8 @@ namespace Domain.Enums
 
         CrawlingFailed = 4,
 
-        OrderCompleted = 5
+        OrderCompleted = 5,
+
+        BotClosed=6,
     }
 }

@@ -63,6 +63,7 @@ namespace Infrastructure.Persistence.Migrations.Application
                         .HasColumnType("char(36)");
 
                     b.Property<DateTimeOffset>("CreatedOn")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime(6)");
 
                     b.Property<DateTimeOffset?>("DeletedOn")

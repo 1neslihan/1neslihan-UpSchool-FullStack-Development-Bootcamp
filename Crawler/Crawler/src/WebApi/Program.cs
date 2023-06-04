@@ -48,5 +48,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.MapHub<UserLogHub>("/Hubs/UserLogHub");
+app.MapHub<DataTransferHub>("/Hubs/DataTransferHub");
 
 app.Run();

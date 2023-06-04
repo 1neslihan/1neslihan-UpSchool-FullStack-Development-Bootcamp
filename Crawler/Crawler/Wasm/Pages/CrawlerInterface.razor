@@ -1,37 +1,84 @@
 ﻿@page "/CrawlerInterface"
+@using Application.Common.Interfaces;
 @using Domain.Dtos;
 @using Microsoft.AspNetCore.SignalR.Client;
 @inject HttpClient httpClient;
-<h3>CrawlerInterface</h3>
-<div class="row">
-    <div class="col-lg-4">
-        <div class=fakeMenu>
-            <div class="fakeButtons fakeClose"></div>
-            <div class="fakeButtons fakeMinimize"></div>
-            <div class="fakeButtons fakeZoom"></div>
-        </div>
-        <div class="fakeScreen">
-            @foreach (var log in logs)
-            {
-                <p class="line1">@log.Message <span class="cursor4f">@log.SendOn.ToString("g")</span></p>
-            }
+@inject IJSRuntime JSRuntime;
 
+
+
+
+<h3 id="Header">Crawler Interface</h3>
+
+<button class="btn btn-warning btn-lg" id="plus" @onclick="ShowModal">Order Add</button>
+
+@if (showModal)
+{
+    <div class="modal show d-block" tabindex="-1" role="dialog" style="pointer-events:auto">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Order Request</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @onclick="CloseModal"></button>
+                </div>
+                <div class="modal-body">
+                    @*Dropdown selector*@
+                    <p style="text-align:left">Which kind of product are you looking for</p>
+                    <InputSelect class="form-select form-select-sm mb-3" @bind-Value="selectedOption">
+                        <option value="0">All</option>
+                        <option value="1">Discount</option>
+                        <option value="2">Non discount</option>
+                    </InputSelect>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" @onclick="ToggleInput">
+                        <label class="form-check-label" style="text-align:left" for="flexSwitchCheckDefault">For spesific amount.</label>
+                    </div>
+                    @if (showInput)
+                    {
+                        <input type="number" class="form-control" @oninput="UpdateCustomAmount" value="@customAmount" />
+                    }
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" @onclick="@(()=>SendDataToConsole(customAmount,selectedOption))">Create Order</button>
+
+                </div>
+            </div>
         </div>
     </div>
-    
+}
+
+
+
+
+<div class="fakeMenu">
+    <div class="fakeButtons fakeClose"></div>
+    <div class="fakeButtons fakeMinimize"></div>
+    <div class="fakeButtons fakeZoom"></div>
 </div>
+<div class="fakeScreen">
+    @foreach (var log in logs)
+    {
+        <p class="line1">@log.Message <span>@log.SendOn.ToString("g")</span><span style="float:right">Yazınız</span></p>
+    }
+
+</div>
+
 
 
 @code {
     private List<UserLogDto> logs = new List<UserLogDto>();
     private HubConnection? hubConnection;
+    private HubConnection? dataTransferHubConnection;
+    private string selectedOption = "0";
+    
     protected override async Task OnInitializedAsync()
     {
+        
         var hubConnection = new HubConnectionBuilder()
         .WithUrl($"https://localhost:7090/Hubs/UserLogHub")
         .WithAutomaticReconnect()
         .Build();
-
         hubConnection.On<UserLogDto>("NewUserLogAdded", (UserLogDto) =>
         {
             logs.Add(UserLogDto);
@@ -40,8 +87,84 @@
 
         await hubConnection.StartAsync();
 
+
         await base.OnInitializedAsync();
     }
+    
+
+    private bool showModal = false;
+
+    private void ShowModal()
+    {
+        showModal = true;
+        JSRuntime.InvokeVoidAsync("showModal");  //JavaScript metodunu çağırarak modalı açın
+    }
+
+    private void CloseModal()
+    {
+        showModal = false;
+        JSRuntime.InvokeVoidAsync("hideModal"); // JavaScript metodunu çağırarak modalı kapatın
+    }
+
+
+    private string menuDisplay = "none";
+
+    private void ShowMenu()
+    {
+        if (menuDisplay == "none")
+            menuDisplay = "block";
+        else
+            menuDisplay = "none";
+    }
+
+    bool showInput = false;
+    int customAmount;
+
+    void ToggleInput()
+    {
+        showInput = !showInput;
+        
+    }
+
+    void UpdateCustomAmount(ChangeEventArgs e)
+    {
+        string inputValue = e.Value.ToString();
+        if (string.IsNullOrEmpty(inputValue))
+        {
+            customAmount = -1;
+        }
+        if (int.TryParse(inputValue, out int result))
+        {
+            customAmount = result;
+        }
+        else
+        {
+            customAmount = -1;
+        }
+    }
+
+    private async Task SendDataToConsole(int customAmount, string selectedOption)
+    {
+        //var connection = new HubConnectionBuilder()
+        //    .WithUrl("https://localhost:7090/Hubs/DataTransferHub") // Console uygulamasının SignalR endpointine uygun URL'yi buraya girin
+        //    .WithAutomaticReconnect()
+        //    .Build();
+
+        //await connection.StartAsync();
+        //var dataTransferHubConnection = new HubConnectionBuilder()
+        //.WithUrl($"https://localhost:7090/Hubs/DataTransferHub")
+        //.WithAutomaticReconnect()
+        //.Build();
+
+        //await dataTransferHubConnection.StartAsync();
+
+        //await dataTransferHubConnection.InvokeAsync("SendDataToConsole", customAmount, selectedOption);
+
+        
+    }
+
+    
+
 
 }
 
@@ -49,6 +172,24 @@
     body {
         background-color: #F1D4E5;
         padding: 10px;
+    }  
+    #Header{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+    }
+    
+    #plus{
+        border-radius:5px 20px;
+        /*margin-top: 10px;
+        margin-bottom: 10px;*/
+        margin: 20px 45%;
+        
+    }
+    #plus:hover{
+        color:white;
+        background-color: #32CD32;
+        box-shadow:1px 1px 6px  #FFFFFF;
+        
     }
 
     .fakeButtons {
@@ -77,11 +218,11 @@
     }
 
     .fakeMenu {
-        width: 100%;
+        width: 75%;
         box-sizing: border-box;
         height: 25px;
         background-color: #bbb;
-        /*margin: 0 auto;*/
+        margin: 0 auto;
         border-top-right-radius: 5px;
         border-top-left-radius: 5px;
     }
@@ -89,15 +230,16 @@
     .fakeScreen {
         background-color: #16213E;
         box-sizing: border-box;
-        width: 100%;
-        /*margin: 0 auto;*/
+        width: 75%;
+        height:550px;
+        margin: 0 auto;
         padding: 20px;
         opacity: 0.8;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
     }
 
-    p {
+    p.line1 {
         position: static;
         /*left: 50%;*/
         /*margin-left: -8.5em;*/
@@ -173,6 +315,7 @@
         -o-animation: blink 1s 8.5s infinite;
         animation: blink 1s 8.5s infinite;
     }
+
 
     @@-webkit-keyframes blink {
         0% {

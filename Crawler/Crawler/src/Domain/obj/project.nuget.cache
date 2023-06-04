@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hj74Xt51Xx2/45UIEZU+QeiO3ZIeq9uXy00KI0Y71Bxq3uYoyhbb0aiAds98vNtqavj6j+sXJCrzRratiINrKA==",
+  "dgSpecHash": "dcn7aBOvRGSfMPQz4kk52frv4RNXUeAOFznipZXWlQsztiLx13SCqhZaOwRzt+81ZSjA8E4ozIY7UHYV5FyXFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler\\Crawler\\src\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DL_ne\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
     "C:\\Users\\DL_ne\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

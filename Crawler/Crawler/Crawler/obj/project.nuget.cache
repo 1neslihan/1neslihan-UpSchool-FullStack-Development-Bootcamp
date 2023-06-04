@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aUJNa8uMk+QPRcgtMirtjlTPO6+iLJ8heH+CCMdcATUcEwscfndoR5mSKJ6GK1ieOKN1OJ7WqPFlp0S6kAk8oA==",
+  "dgSpecHash": "tBhttpDcBlNzjD54jpms3Yy4vCzkwDfHbmtjDmeh9oMV9WGDqnhIDC/9S0FGQUiI8HPNg90duLnsTSa+QS/MpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler\\Crawler\\Crawler\\Crawler.csproj",
+  "projectFilePath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\Crawler\\Crawler.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DL_ne\\.nuget\\packages\\anglesharp\\0.17.1\\anglesharp.0.17.1.nupkg.sha512",
     "C:\\Users\\DL_ne\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",

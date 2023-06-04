@@ -9,5 +9,6 @@ namespace WebApi.Hubs
         {
             await Clients.AllExcept(Context.ConnectionId).SendAsync("NewUserLogAdded", log);
         }
+        
     }
 }

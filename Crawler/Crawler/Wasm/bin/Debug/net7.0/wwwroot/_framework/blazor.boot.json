@@ -215,7 +215,7 @@
       "System.Private.CoreLib.dll": "sha256-EVS7zPxPV\/41g2mzPwdXtwiigWxI\/SeAHme1IgyD6tc=",
       "Application.dll": "sha256-uxrdYZdTb96d2r+03+9W4uHzYajwkli4OYeiaSxMOkc=",
       "Domain.dll": "sha256-aDJmIULUDXIKEhjIAYDNQqvMJXe2zZMJ034I9k59LjU=",
-      "Wasm.dll": "sha256-wGxF5ytbzb0VXj7icsMM8jOEFD6EeMsAsT4yTDrEZE0="
+      "Wasm.dll": "sha256-GX61O7s8Ixk5PVQgL5OMRx3XFXcSrOsOwOKigDxRmO0="
     },
     "extensions": null,
     "lazyAssembly": null,
@@ -223,7 +223,7 @@
     "pdb": {
       "Application.pdb": "sha256-TiCT4nhGGE70\/YTY1vZvm0818dNOjCGyRCAIIr0XGWk=",
       "Domain.pdb": "sha256-+DPLsvvIJR8E\/0ay1o\/dh0SOw5e7EDwha3Ndyo8a2Nk=",
-      "Wasm.pdb": "sha256-cX+yNOJaEw3XNOTKt\/dPKeZB2d9OzFffgmYbYxqGIYc="
+      "Wasm.pdb": "sha256-cfk8B0TJuJG8cWng+RxnX33tywsiidLkaPvLeDGvlHo="
     },
     "runtime": {
       "dotnet.7.0.5.82w45qv6mf.js": "sha256-codB25EodaFEP43MDCfMBuKXU4LqurUKnQrpoMIFnPs=",

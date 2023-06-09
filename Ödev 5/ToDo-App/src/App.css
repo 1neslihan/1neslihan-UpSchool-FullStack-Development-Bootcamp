@@ -1,0 +1,56 @@
+.card-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.custom-card {
+  width: 500px !important;
+  background-color: rgba(204, 226, 255, 0.99) !important;
+}
+
+.input {
+  width: 100% !important;
+  border-radius: 15px;
+}
+
+.changeDisplay {
+  display: inline-block;
+  width: 90%;
+}
+
+.clear-background {
+  background-color: transparent !important;
+}
+
+.font-custom {
+  font-family: "Kalam", cursive !important;
+}
+
+.todoItem-align {
+  padding-top: 20px;
+  cursor: pointer;
+  background-color: transparent !important;
+}
+
+.scrollable {
+  max-height: 400px;
+  overflow: auto;
+}
+.scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollable::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #fce9f1;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background-color: #f1d4e5;
+}

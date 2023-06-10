@@ -2,12 +2,12 @@ import { useState, ChangeEvent, useEffect } from "react";
 import "./App.css";
 import TodoDto from "./types/TodoDto";
 import { v4 as uuidv4 } from "uuid";
+import moment from 'moment';
 import { Button, Card, Form, Icon, Input, Segment } from "semantic-ui-react";
 
 function App() {
-  
   const [task, setTask] = useState("");
-  const [isReversed, setIsReversed] = useState(false);
+  const [isSortedByDate, setIsSortedByDate] = useState(false);
   const [todoItem, setTodoArray] = useState<TodoDto[]>([]);
 
   useEffect(() => {
@@ -37,16 +37,22 @@ function App() {
     setTodoArray(remainArray);
   };
 
-  const handleReverseArray = (): void => {
-    setTodoArray((prevArray) => [...prevArray].reverse());
-    setIsReversed(!isReversed);
+  const handleSortByDateArray = (): void => {
+    const sortedArray = [...todoItem].sort((a, b) => {
+      const dateA = moment(a.createdDate);
+      const dateB = moment(b.createdDate);
+      return dateA.diff(dateB);
+    });
+    setTodoArray(sortedArray);
+    //setTodoArray((prevArray) => [...prevArray].reverse());
+     setIsSortedByDate(!isSortedByDate);
   };
 
   const getIconClassName = () => {
-    if (isReversed) {
+    if (isSortedByDate) {
       return "blue";
     } else {
-      return "pink"; 
+      return "pink";
     }
   };
 
@@ -67,7 +73,7 @@ function App() {
                 <Form.Field className="ui action input">
                   <Input
                     type="text"
-                    maxLength={50}
+                    maxLength={40}
                     value={task}
                     onChange={handleInputChange}
                   />
@@ -81,12 +87,12 @@ function App() {
                   </Button>
                   <Button
                     className="clear-background"
-                    onClick={handleReverseArray}
+                    onClick={handleSortByDateArray}
                   >
                     <Icon
                       size="big"
                       name={
-                        isReversed ? "angle double down" : "angle double up"
+                        isSortedByDate ? "angle double down" : "angle double up"
                       }
                       className={getIconClassName()}
                     />
@@ -144,6 +150,7 @@ function App() {
           zIndex: 9999,
           color: "white",
           textShadow: "1px 1px 2px blue",
+          
         }}
       >
         Created by Neslihan Çakırbaş

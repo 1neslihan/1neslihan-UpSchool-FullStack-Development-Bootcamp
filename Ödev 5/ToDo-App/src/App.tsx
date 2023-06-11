@@ -8,11 +8,11 @@ import { Button, Card, Form, Icon, Input, Segment } from "semantic-ui-react";
 function App() {
   const [task, setTask] = useState("");
   const [isSortedByDate, setIsSortedByDate] = useState(false);
-  const [todoItem, setTodoArray] = useState<TodoDto[]>([]);
+  const [todoArray, setTodoArray] = useState<TodoDto[]>([]);
 
   useEffect(() => {
     // State güncellendiğinde yapılacak işlemler
-  }, [todoItem]);
+  }, [todoArray]);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
@@ -26,19 +26,19 @@ function App() {
   };
 
   const handleCrossTodo = (id: string) => {
-    const updatedArray = todoItem.map((todo) =>
+    const updatedArray = todoArray.map((todo) =>
       todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
     );
     setTodoArray(updatedArray);
   };
 
   const handleDeleteToDoItem = (id: string) => {
-    const remainArray = todoItem.filter((todo) => todo.id !== id);
+    const remainArray = todoArray.filter((todo) => todo.id !== id);
     setTodoArray(remainArray);
   };
 
   const handleSortByDateArray = (): void => {
-    const sortedArray = [...todoItem].sort((a, b) => {
+    const sortedArray = [...todoArray].sort((a, b) => {
       const dateA = moment(a.createdDate);
       const dateB = moment(b.createdDate);
       return dateA.diff(dateB);
@@ -55,6 +55,7 @@ function App() {
       return "pink";
     }
   };
+
 
   return (
     <>
@@ -76,6 +77,7 @@ function App() {
                     maxLength={40}
                     value={task}
                     onChange={handleInputChange}
+                    placeholder="Enter a todo..."
                   />
                   <Button
                     className={`blue font-custom ${getIconClassName()}`}
@@ -83,7 +85,7 @@ function App() {
                     onClick={handleGenerateTask}
                     size="big"
                   >
-                    Ekle
+                    Add
                   </Button>
                   <Button
                     className="clear-background"
@@ -104,7 +106,7 @@ function App() {
                 className="font-custom scrollable"
                 style={{ margin: 0 }}
               >
-                {todoItem.map((todo) => (
+                {todoArray.map((todo) => (
                   <Segment
                     basic
                     className="todoItem-align"

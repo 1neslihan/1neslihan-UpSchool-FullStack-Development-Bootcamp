@@ -16,7 +16,7 @@ namespace Infrastructure.Persistence.Migrations.Application
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.5")
+                .HasAnnotation("ProductVersion", "7.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Domain.Entities.Order", b =>
@@ -25,9 +25,17 @@ namespace Infrastructure.Persistence.Migrations.Application
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
+                    b.Property<string>("CreatedByUserId")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
                     b.Property<DateTimeOffset>("CreatedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime(6)");
+
+                    b.Property<string>("DeletedByUserId")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTimeOffset?>("DeletedOn")
                         .HasColumnType("datetime(6)");
@@ -36,6 +44,10 @@ namespace Infrastructure.Persistence.Migrations.Application
                         .ValueGeneratedOnAdd()
                         .HasColumnType("tinyint(1)")
                         .HasDefaultValueSql("0");
+
+                    b.Property<string>("ModifiedByUserId")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTimeOffset?>("ModifiedOn")
                         .HasColumnType("datetime(6)");
@@ -62,9 +74,17 @@ namespace Infrastructure.Persistence.Migrations.Application
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
+                    b.Property<string>("CreatedByUserId")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
                     b.Property<DateTimeOffset>("CreatedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime(6)");
+
+                    b.Property<string>("DeletedByUserId")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTimeOffset?>("DeletedOn")
                         .HasColumnType("datetime(6)");
@@ -73,6 +93,10 @@ namespace Infrastructure.Persistence.Migrations.Application
                         .ValueGeneratedOnAdd()
                         .HasColumnType("tinyint(1)")
                         .HasDefaultValueSql("0");
+
+                    b.Property<string>("ModifiedByUserId")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTimeOffset?>("ModifiedOn")
                         .HasColumnType("datetime(6)");
@@ -98,9 +122,17 @@ namespace Infrastructure.Persistence.Migrations.Application
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
+                    b.Property<string>("CreatedByUserId")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
                     b.Property<DateTimeOffset>("CreatedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime(6)");
+
+                    b.Property<string>("DeletedByUserId")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTimeOffset?>("DeletedOn")
                         .HasColumnType("datetime(6)");
@@ -112,6 +144,10 @@ namespace Infrastructure.Persistence.Migrations.Application
 
                     b.Property<bool>("IsOnSale")
                         .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("ModifiedByUserId")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTimeOffset?>("ModifiedOn")
                         .HasColumnType("datetime(6)");

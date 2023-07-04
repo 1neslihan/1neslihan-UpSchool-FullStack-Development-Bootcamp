@@ -1,5 +1,6 @@
 ﻿using Application.Common.Interfaces;
 using Domain.Entities;
+using Domain.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,17 @@ namespace Infrastructure.Persistence.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Configurations
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+            // Ignores
+            modelBuilder.Ignore<User>();
+            modelBuilder.Ignore<Role>();
+            modelBuilder.Ignore<UserRole>();
+            modelBuilder.Ignore<RoleClaim>();
+            modelBuilder.Ignore<UserToken>();
+            modelBuilder.Ignore<UserClaim>();
+            modelBuilder.Ignore<UserLogin>();
 
             base.OnModelCreating(modelBuilder);
         }

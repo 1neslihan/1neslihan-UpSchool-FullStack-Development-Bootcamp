@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Domain.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -31,23 +32,48 @@ namespace Infrastructure.Persistence.Configurations.Application
                 .IsRequired()
                 .HasConversion<int>();
 
+            //Common Fields
+
             //CreatedOn
             builder.Property(x => x.CreatedOn)
                 .IsRequired()
                 .ValueGeneratedOnAdd();
 
+            // CreatedByUserId
+            builder.Property(x => x.CreatedByUserId)
+                .IsRequired(false)
+                .HasMaxLength(100);
+
             //ModifiedOn
             builder.Property(x => x.ModifiedOn).IsRequired(false);
+
+            // ModifiedByUserId
+            builder.Property(x => x.ModifiedByUserId)
+                .IsRequired(false)
+                .HasMaxLength(100);
 
             //DeletedOn
             builder.Property(x => x.DeletedOn).IsRequired(false);
 
+            //DeletedByUserId
+            builder.Property(x => x.DeletedByUserId)
+                .IsRequired(false)
+                .HasMaxLength(100);
+     
             //IsDeleted
-            builder.Property(x => x.IsDeleted).IsRequired();
-            builder.Property(x => x.IsDeleted).HasDefaultValueSql("0");
+            builder.Property(x => x.IsDeleted)
+                .IsRequired()
+                .HasDefaultValueSql("0");
             builder.HasIndex(x => x.IsDeleted);
 
             //Relationships
+            //builder.HasOne<User>(x => x.User)
+            //    .WithMany(x => x.Orders)
+            //    .HasForeignKey(x => x.UserId)
+            //    .IsRequired()
+            //    .OnDelete(DeleteBehavior.Cascade);
+
+
             builder.HasMany<Product>(x => x.Products)
                 .WithOne(x => x.Order)
                 .HasForeignKey(x => x.OrderId)

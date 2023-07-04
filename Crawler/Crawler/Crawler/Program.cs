@@ -1,7 +1,7 @@
-﻿using Application.Features.OrderEvents.Commands.Add;
+﻿using Application.Common.Models.SignalR;
+using Application.Features.OrderEvents.Commands.Add;
 using Application.Features.Orders.Commands.Add;
 using Application.Features.Products.Commands.Add;
-using Domain.Dtos;
 using Domain.Enums;
 using Microsoft.AspNetCore.SignalR.Client;
 using Newtonsoft.Json;
@@ -121,7 +121,7 @@ while (!Continue)
 
 
 
-        driver.Navigate().GoToUrl("https://finalproject.dotnet.gg");
+        driver.Navigate().GoToUrl("https://4teker.net/");
         ReadOnlyCollection<IWebElement> pagination = driver.FindElements(By.ClassName("page-item"));
 
         int productCounter = 0; //ürün sayısı tutucu
@@ -138,7 +138,7 @@ while (!Continue)
 
         for (int i = 1; i<pagination.Count; i++)
         {
-            driver.Navigate().GoToUrl($"https://finalproject.dotnet.gg/?currentPage={i}");
+            driver.Navigate().GoToUrl($"https://4teker.net/?currentPage={i}");
             Console.WriteLine($"{i}.Sayfa");
             Console.WriteLine();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);

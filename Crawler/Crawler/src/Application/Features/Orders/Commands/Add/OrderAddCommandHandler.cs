@@ -26,13 +26,14 @@ namespace Application.Features.Orders.Commands.Add
                 Id=request.Id,
                 RequestedAmount=request.RequestedAmount,
                 TotalFoundAmount=request.TotalFoundAmount,
+                //UserId=request.UserId,
                 ProductCrawlType=request.ProductCrawlType,
             };
 
             await _applicationDbContext.Orders.AddAsync(order, cancellationToken);
             await _applicationDbContext.SaveChangesAsync(cancellationToken);
 
-            return new Response<Guid>($"Get {order.ProductCrawlType} from db.", order.Id);
+            return new Response<Guid>($"Add {order.Id} to the db.", order.Id);
 
         }
     }

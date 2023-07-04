@@ -1,7 +1,8 @@
 ﻿@page "/CrawlerInterface"
-@using Application.Common.Interfaces;
-@using Domain.Dtos;
-@using Microsoft.AspNetCore.SignalR.Client;
+@using Application.Common.Interfaces
+@*@using Domain.Dtos;*@
+@using Microsoft.AspNetCore.SignalR.Client
+@using Application.Common.Models.SignalR
 @inject HttpClient httpClient;
 @inject IJSRuntime JSRuntime;
 
@@ -70,11 +71,11 @@
     private List<UserLogDto> logs = new List<UserLogDto>();
     private HubConnection? hubConnection;
     private HubConnection? dataTransferHubConnection;
-    private string selectedOption = "0";
-    
+    private int selectedOption;
+
     protected override async Task OnInitializedAsync()
     {
-        
+
         var hubConnection = new HubConnectionBuilder()
         .WithUrl($"https://localhost:7090/Hubs/UserLogHub")
         .WithAutomaticReconnect()
@@ -90,7 +91,7 @@
 
         await base.OnInitializedAsync();
     }
-    
+
 
     private bool showModal = false;
 
@@ -123,7 +124,7 @@
     void ToggleInput()
     {
         showInput = !showInput;
-        
+
     }
 
     void UpdateCustomAmount(ChangeEventArgs e)
@@ -143,22 +144,20 @@
         }
     }
 
-    private async Task SendDataToConsole(int customAmount, string selectedOption)
+    private async Task SendDataToConsole(int customAmount, int selectedOption)
     {
-        //var connection = new HubConnectionBuilder()
-        //    .WithUrl("https://localhost:7090/Hubs/DataTransferHub") // Console uygulamasının SignalR endpointine uygun URL'yi buraya girin
-        //    .WithAutomaticReconnect()
-        //    .Build();
 
-        //await connection.StartAsync();
-        //var dataTransferHubConnection = new HubConnectionBuilder()
-        //.WithUrl($"https://localhost:7090/Hubs/DataTransferHub")
-        //.WithAutomaticReconnect()
-        //.Build();
+        Console.WriteLine("Data transfer hub başladı", customAmount,selectedOption);
+        Console.WriteLine(customAmount);
+        Console.WriteLine(selectedOption);
+        var dataTransferHubConnection = new HubConnectionBuilder()
+        .WithUrl($"https://localhost:7090/Hubs/DataTransferHub")
+        .WithAutomaticReconnect()
+        .Build();
 
-        //await dataTransferHubConnection.StartAsync();
+        await dataTransferHubConnection.StartAsync();
 
-        //await dataTransferHubConnection.InvokeAsync("SendDataToConsole", customAmount, selectedOption);
+        await dataTransferHubConnection.InvokeAsync("SendDataToConsole", customAmount, selectedOption);
 
         
     }

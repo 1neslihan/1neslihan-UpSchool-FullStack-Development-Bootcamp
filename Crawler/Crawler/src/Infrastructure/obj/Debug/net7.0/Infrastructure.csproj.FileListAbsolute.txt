@@ -17,3 +17,22 @@ C:\Users\DL_ne\OneDrive\Masaüstü\Crawler\Crawler\src\Infrastructure\obj\Debug\
 C:\Users\DL_ne\OneDrive\Masaüstü\Crawler\Crawler\src\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
 C:\Users\DL_ne\OneDrive\Masaüstü\Crawler\Crawler\src\Infrastructure\obj\Debug\net7.0\Infrastructure.genruntimeconfig.cache
 C:\Users\DL_ne\OneDrive\Masaüstü\Crawler\Crawler\src\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\bin\Debug\net7.0\Infrastructure.deps.json
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\bin\Debug\net7.0\Infrastructure.runtimeconfig.json
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\bin\Debug\net7.0\Infrastructure.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\bin\Debug\net7.0\Infrastructure.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\bin\Debug\net7.0\Application.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\bin\Debug\net7.0\Domain.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\bin\Debug\net7.0\Application.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\bin\Debug\net7.0\Domain.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\obj\Debug\net7.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfo.cs
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CopyComplete
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\obj\Debug\net7.0\Infrastructure.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\obj\Debug\net7.0\Infrastructure.genruntimeconfig.cache
+C:\Users\DL_ne\OneDrive\Masaüstü\Crawler - Kopya\Crawler\src\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll

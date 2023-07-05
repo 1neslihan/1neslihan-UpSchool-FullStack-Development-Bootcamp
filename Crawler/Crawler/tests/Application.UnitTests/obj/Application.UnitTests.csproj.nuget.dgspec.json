@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler - Kopya\\Crawler\\tests\\Application.UnitTests\\Application.UnitTests.csproj": {}
+    "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler\\Crawler\\tests\\Application.UnitTests\\Application.UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler - Kopya\\Crawler\\tests\\Application.UnitTests\\Application.UnitTests.csproj": {
+    "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler\\Crawler\\tests\\Application.UnitTests\\Application.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler - Kopya\\Crawler\\tests\\Application.UnitTests\\Application.UnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler\\Crawler\\tests\\Application.UnitTests\\Application.UnitTests.csproj",
         "projectName": "Application.UnitTests",
-        "projectPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler - Kopya\\Crawler\\tests\\Application.UnitTests\\Application.UnitTests.csproj",
+        "projectPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler\\Crawler\\tests\\Application.UnitTests\\Application.UnitTests.csproj",
         "packagesPath": "C:\\Users\\DL_ne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler - Kopya\\Crawler\\tests\\Application.UnitTests\\obj\\",
+        "outputPath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler\\Crawler\\tests\\Application.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tXjEcEDr43WO2fw87JkLZuWYdB5OVkTDjpar8EnsNO917GHUjJS6Y9HeVtncC1IjP3t/JebB2aNLALBzt/Tuyw==",
+  "dgSpecHash": "wKYbAcyMHqe9nQb/wVdH+ZGmRG++mde80jNe0lnmQIubGGjZ0jSHW5KUj4tqrg6dPU75NCvoTkCVGDoQNHTMmQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler - Kopya\\Crawler\\src\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler\\Crawler\\src\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DL_ne\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
     "C:\\Users\\DL_ne\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

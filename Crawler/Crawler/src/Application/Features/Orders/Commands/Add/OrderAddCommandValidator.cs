@@ -1,0 +1,31 @@
+﻿using Application.Common.Interfaces;
+using FluentValidation;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Application.Features.Orders.Commands.Add
+{
+    public class OrderAddCommandValidator:AbstractValidator<OrderAddCommand>
+    {
+        private readonly IApplicationDbContext _applicationDbContext;
+        public OrderAddCommandValidator(IApplicationDbContext applicationDbContext)
+        {
+            _applicationDbContext = applicationDbContext;
+            RuleFor(x => x.Id).NotEmpty();
+            //RuleFor(x => x.UserId).NotEmpty();
+            RuleFor(x => x.ProductCrawlType).NotNull();
+
+            RuleFor(x => x.Id).MustAsync(CheckIfOrderExists)
+                .WithMessage("This order number is already exists in the database");
+        }
+
+        private  Task<bool> CheckIfOrderExists(Guid id, CancellationToken cancellationToken)
+        {
+            return Task.FromResult(!_applicationDbContext.Orders.Any(x => x.Id == id));
+        }
+    }
+}

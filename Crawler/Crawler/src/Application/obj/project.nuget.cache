@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Wjb3CaG80wAveQ3oltKKCKORkFpiuZGxZjjJpp8pPV9SBFUT4sOo5rdINUKcfsEps98Z3F2ixN81bC8UpDNaBg==",
+  "dgSpecHash": "qQZOGztfeQek8ne5ki2BgsqnzknuVJhKa1udhbq7Lbnw7Q5Y49U13Y4xAAdbKHn0n+k8Qcl3NZQ2ymlQh07gZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler\\Crawler\\src\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DL_ne\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
     "C:\\Users\\DL_ne\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.2\\fluentvalidation.dependencyinjectionextensions.11.5.2.nupkg.sha512",

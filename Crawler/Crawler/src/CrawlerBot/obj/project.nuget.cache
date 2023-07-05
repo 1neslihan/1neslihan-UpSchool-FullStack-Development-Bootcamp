@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KJUylwRnqc3pkc+RlNmC3WqS9ek2WmzyPL5zUMzeUPrQShS9bSv5R8137mM01Vbr3zNfXV7s5xgBOJ4TNAzJlg==",
+  "dgSpecHash": "JvC4KOqAA4LUDRf0LrPbpagtNRX8H7lclwKe26OVo0juTqMiD0nbtSeNUvZhpZxzfCBu0pmbifDOJ/f4pG1kpg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler\\Crawler\\src\\CrawlerBot\\CrawlerBot.csproj",
+  "projectFilePath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\CrawlerBot\\CrawlerBot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DL_ne\\.nuget\\packages\\anglesharp\\1.0.4\\anglesharp.1.0.4.nupkg.sha512",
     "C:\\Users\\DL_ne\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "veLQBofgqQUADZpvjiG0v24SOR1mgSl065ZEeJ5ccqiOPrK+VDfbABp/Fj3MaG1MQM65PKg+oAbYgMR+I301dA==",
+  "dgSpecHash": "UsmqUlen0XmlvcvFAKQNOGUTfsXVVe04N9WUu58D0+maWuUQVwsrk5peJtC09snv9A+iZ9r/+ZEf9GN0kBVO1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Crawler\\Crawler\\src\\Wasm\\Wasm.csproj",
+  "projectFilePath": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\Wasm.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DL_ne\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
     "C:\\Users\\DL_ne\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.2\\fluentvalidation.dependencyinjectionextensions.11.5.2.nupkg.sha512",

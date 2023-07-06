@@ -4,7 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <BaseIntermediateOutputPath>C:\Users\DL_ne\OneDrive\Masaüstü\Crawler\Crawler\src\Wasm\obj</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath>C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\obj</BaseIntermediateOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,5 +17,4 @@
   <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
-
 </Project>

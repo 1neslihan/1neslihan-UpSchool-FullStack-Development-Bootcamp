@@ -15,9 +15,11 @@ namespace Application.Features.Orders.Commands.Add
         public OrderAddCommandValidator(IApplicationDbContext applicationDbContext)
         {
             _applicationDbContext = applicationDbContext;
-            RuleFor(x => x.Id).NotEmpty();
-            //RuleFor(x => x.UserId).NotEmpty();
-            RuleFor(x => x.ProductCrawlType).NotNull();
+            RuleFor(x => x.Id)
+                .NotEmpty();
+
+            RuleFor(x => x.ProductCrawlType).NotNull()
+                .WithMessage("You must select the product type");
 
             RuleFor(x => x.Id).MustAsync(CheckIfOrderExists)
                 .WithMessage("This order number is already exists in the database");
@@ -27,5 +29,8 @@ namespace Application.Features.Orders.Commands.Add
         {
             return Task.FromResult(!_applicationDbContext.Orders.Any(x => x.Id == id));
         }
+
+        
+
     }
 }

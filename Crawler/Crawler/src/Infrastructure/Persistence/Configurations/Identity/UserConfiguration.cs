@@ -68,8 +68,8 @@ namespace Infrastructure.Persistence.Configurations.Identity
             //builder.HasMany<Order>().WithOne().HasForeignKey(x => x.UserId).IsRequired();
 
             // CreatedDate
-            builder.Property(x => x.CreatedOn).IsRequired();
-
+            builder.Property(x => x.CreatedOn)
+                .IsRequired();
             // CreatedByUserId
             builder.Property(user => user.CreatedByUserId).IsRequired(false);
 

@@ -5,15 +5,20 @@ using WebApi.Hubs;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Filters;
 using System.Text;
+using Domain.Settings;
+using Newtonsoft.Json.Linq;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 //Format exception messages
-builder.Services.AddControllers(/*opt =>*/
-//{
-    //opt.Filters.Add<ValidationFilter>();
-/*}*/);
+builder.Services.AddControllers(opt =>
+{
+    opt.Filters.Add<GlobalExceptionFilter>();
+});
+
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
 
 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); //base64 encoding
 
@@ -32,6 +37,7 @@ builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddHttpClient();
+//builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(apiUrl) });
 
 
 builder.Services.AddCors(options =>

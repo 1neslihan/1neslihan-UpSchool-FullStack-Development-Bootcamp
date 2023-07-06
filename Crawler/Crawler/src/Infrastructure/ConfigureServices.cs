@@ -41,7 +41,9 @@ namespace Infrastructure
             }).AddEntityFrameworkStores<IdentityContext>()
                 .AddDefaultTokenProviders();
 
-
+            //Scoped Services
+            services.AddScoped<IAuthenticationService, AuthenticationManager>();
+            services.AddSingleton<IJwtService, JwtManager>();
             services.AddSingleton<IEmailService, EmailManager>();
             
             return services;

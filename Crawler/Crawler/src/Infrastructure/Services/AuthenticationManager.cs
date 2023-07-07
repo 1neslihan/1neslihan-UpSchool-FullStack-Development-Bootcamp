@@ -1,5 +1,6 @@
 ﻿using Application.Common.Interfaces;
 using Application.Common.Models.Auth;
+using Application.Features.Auth.Commands.Login;
 using Domain.Identity;
 using FluentValidation;
 using FluentValidation.Results;
@@ -16,11 +17,14 @@ namespace Infrastructure.Services
     internal class AuthenticationManager : IAuthenticationService
     {
         private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
+        private readonly IJwtService _jwtService;
 
-        public AuthenticationManager(UserManager<User> userManager)
+        public AuthenticationManager(UserManager<User> userManager, SignInManager<User> signInManager = null, IJwtService jwtService = null)
         {
             _userManager=userManager;
-           
+            _signInManager=signInManager;
+            _jwtService=jwtService;
         }
 
         public Task<bool> CheckIfUserExists(string email, CancellationToken cancellationToken)
@@ -30,26 +34,46 @@ namespace Infrastructure.Services
 
         public async Task<string> CreateUserAsync(CreateUserDto createUserDto, CancellationToken cancellationToken)
         {
-            var user=createUserDto.MapToUser();
+            var user = createUserDto.MapToUser();
 
-            var identityResult= await _userManager.CreateAsync(user, createUserDto.Password);
+            var identityResult = await _userManager.CreateAsync(user, createUserDto.Password);
             if (!identityResult.Succeeded)
             {
                 var failures = identityResult.Errors
                     .Select(x => new ValidationFailure(x.Code, x.Description));
-                    
+
 
                 throw new ValidationException(failures);
             }
 
-           
+
             return user.Id;
         }
 
         public async Task<string> GenerateActivationTokenAsync(string userId, CancellationToken cancellationToken)
         {
-            var user= await _userManager.FindByIdAsync(userId);
+            var user = await _userManager.FindByIdAsync(userId);
             return await _userManager.GenerateEmailConfirmationTokenAsync(user);
         }
+
+        public async Task<JwtDto> LoginAsync(AuthLoginRequest authLoginRequest, CancellationToken cancellationToken)
+        {
+            var user = await _userManager.FindByEmailAsync(authLoginRequest.Email);
+            var loginResult = await _signInManager.PasswordSignInAsync(user, authLoginRequest.Password, false, false);
+            if (!loginResult.Succeeded)
+            {
+                throw new ValidationException(CreateValidationFailure);
+            }
+
+            return _jwtService.Generate(user.Id, user.Email, user.FirstName, user.LastName);
+  
+        }
+
+        private List<ValidationFailure> CreateValidationFailure => new List<ValidationFailure>()
+        {
+             new ValidationFailure("Email & Password", "Your email or password is incorrect")
+        };
     }
 }
+    
+

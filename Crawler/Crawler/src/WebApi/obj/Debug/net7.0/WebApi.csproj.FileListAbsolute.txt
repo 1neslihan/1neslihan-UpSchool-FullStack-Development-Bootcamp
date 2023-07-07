@@ -191,3 +191,6 @@ C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcam
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\obj\Debug\net7.0\WebApi.pdb
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\obj\Debug\net7.0\ref\WebApi.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

@@ -1,4 +1,6 @@
 ﻿using Application.Features.Orders.Commands.Add;
+using Application.Features.Orders.Commands.Delete;
+using Application.Features.Orders.Commands.HardDelete;
 using Application.Features.Orders.Queries.GetAll;
 using Application.Features.Products.Commands.Add;
 using Application.Features.Products.Queries.GetAll;
@@ -23,6 +25,22 @@ namespace WebApi.Controllers
         public async Task<IActionResult> GetAllAsync(OrderGetAllQuery query)
         {
             return Ok(await Mediator.Send(query));
+        }
+
+        [HttpPut("SoftDelete")]
+        public async Task<IActionResult> SoftDeleteAsync(Guid id, OrderSoftDeleteCommand command)
+        {
+
+            return Ok(await Mediator.Send(command));
+
+        }
+
+        [HttpDelete("HardDelete")]
+        public async Task<IActionResult> HardDeleteAsync(Guid id, OrderHardDeleteCommand command)
+        {
+
+            return Ok(await Mediator.Send(command));
+
         }
     }
 }

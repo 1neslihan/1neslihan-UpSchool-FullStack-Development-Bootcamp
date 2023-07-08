@@ -28,7 +28,7 @@ namespace Application.Features.Products.Queries.GetAll
             dbQuery= request.IsDeleted.HasValue
                 ? dbQuery.Where(x => x.IsDeleted == request.IsDeleted.Value && x.OrderId==request.OrderId)
                 : dbQuery.Where(x => x.OrderId==request.OrderId);
- 
+
             var productDtos= await dbQuery.Select(x => new ProductGetByOrderIdDto(x.Id, x.OrderId, x.Name, x.Picture, x.IsOnSale, x.Price, x.SalePrice, x.IsDeleted))
                 .AsQueryable()
                 .ToListAsync(cancellationToken);

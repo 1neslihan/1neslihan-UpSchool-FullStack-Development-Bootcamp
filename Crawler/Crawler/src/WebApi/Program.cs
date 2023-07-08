@@ -10,39 +10,48 @@ using Newtonsoft.Json.Linq;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-//Format exception messages
-builder.Services.AddControllers(opt =>
+Log.Logger= new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+try
 {
-    opt.Filters.Add<GlobalExceptionFilter>();
-});
+    var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+    builder.Host.UseSerilog();
 
-Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); //base64 encoding
+    // Add services to the container.
 
-
-builder.Services.Configure<ApiBehaviorOptions>(options =>
-{
-    options.SuppressModelStateInvalidFilter = true;
-});
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(setupAction =>
-{
-    setupAction.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    //Format exception messages
+    builder.Services.AddControllers(opt =>
     {
-        Type = SecuritySchemeType.Http,
-        Scheme = "bearer",
-        BearerFormat = "JWT",
-        Description = $"Input your Bearer token in this format - Bearer token to access this API",
+        opt.Filters.Add<GlobalExceptionFilter>();
     });
-    setupAction.AddSecurityRequirement(new OpenApiSecurityRequirement
+
+    builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+
+    Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); //base64 encoding
+
+
+    builder.Services.Configure<ApiBehaviorOptions>(options =>
+    {
+        options.SuppressModelStateInvalidFilter = true;
+    });
+
+    // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen(setupAction =>
+    {
+        setupAction.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+        {
+            Type = SecuritySchemeType.Http,
+            Scheme = "bearer",
+            BearerFormat = "JWT",
+            Description = $"Input your Bearer token in this format - Bearer token to access this API",
+        });
+        setupAction.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
             new OpenApiSecurityScheme
@@ -55,72 +64,82 @@ builder.Services.AddSwaggerGen(setupAction =>
             }, new List<string>()
         },
     });
-});
-builder.Services.AddSignalR();
+    });
+    builder.Services.AddSignalR();
 
-builder.Services.AddApplicationServices();
-builder.Services.AddInfrastructure(builder.Configuration, builder.Environment.WebRootPath);
+    builder.Services.AddApplicationServices();
+    builder.Services.AddInfrastructure(builder.Configuration, builder.Environment.WebRootPath);
 
-builder.Services.AddHttpClient();
-//builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(apiUrl) });
+    builder.Services.AddHttpClient();
+    //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(apiUrl) });
 
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-        .AddJwtBearer(o =>
-        {
-            o.RequireHttpsMetadata = false;
-            o.SaveToken = false;
-            o.TokenValidationParameters = new TokenValidationParameters
+    builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+            .AddJwtBearer(o =>
             {
-                ValidateIssuerSigningKey = true,
-                ValidateIssuer = true,
-                ValidateAudience = true,
-                ValidateLifetime = true,
-                ClockSkew = TimeSpan.Zero,
-                ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
-                ValidAudience = builder.Configuration["JwtSettings:Audience"],
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"]))
-            };
-        });
+                o.RequireHttpsMetadata = false;
+                o.SaveToken = false;
+                o.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.Zero,
+                    ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
+                    ValidAudience = builder.Configuration["JwtSettings:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"]))
+                };
+            });
 
 
-builder.Services.AddCors(options =>
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy("AllowAll",
+            builder => builder
+                .AllowAnyMethod()
+                .AllowCredentials()
+                .SetIsOriginAllowed((host) => true)
+                .AllowAnyHeader());
+    });
+
+
+
+    var app = builder.Build();
+
+    // Configure the HTTP request pipeline.
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
+
+    app.UseStaticFiles();
+
+    app.UseHttpsRedirection();
+
+    app.UseRouting();
+
+    app.UseCors("AllowAll");
+
+    app.UseAuthorization();
+
+    app.MapControllers();
+
+    app.MapHub<UserLogHub>("/Hubs/UserLogHub");
+    app.MapHub<DataTransferHub>("/Hubs/DataTransferHub");
+    app.Run();
+}
+catch (Exception ex)
 {
-    options.AddPolicy("AllowAll",
-        builder => builder
-            .AllowAnyMethod()
-            .AllowCredentials()
-            .SetIsOriginAllowed((host) => true)
-            .AllowAnyHeader());
-});
 
-
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+    Log.Fatal(ex, "Applicationterminated unexpectedly");
+}
+finally
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    Log.CloseAndFlush();
 }
 
-app.UseStaticFiles();
-
-app.UseHttpsRedirection();
-
-app.UseRouting();
-
-app.UseCors("AllowAll");
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.MapHub<UserLogHub>("/Hubs/UserLogHub");
-app.MapHub<DataTransferHub>("/Hubs/DataTransferHub");
-
-app.Run();

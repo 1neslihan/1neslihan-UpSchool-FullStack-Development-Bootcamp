@@ -195,3 +195,12 @@ C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcam
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\WebApi.staticwebassets.runtime.json
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\Serilog.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\Serilog.AspNetCore.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\Serilog.Extensions.Hosting.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\Serilog.Extensions.Logging.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\Serilog.Formatting.Compact.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\Serilog.Settings.Configuration.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\Serilog.Sinks.Console.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\Serilog.Sinks.Debug.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\WebApi\bin\Debug\net7.0\Serilog.Sinks.File.dll

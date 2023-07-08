@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Application.Features.OrderEvents.Queries.GetAll
 {
-    public class OrderEventGetAllDto
+    public class OrderEventGetByOrderIdDto
     {
-        public OrderEventGetAllDto(Guid id, Guid orderId, OrderStatus status, bool isDeleted)
+        public OrderEventGetByOrderIdDto(Guid id, Guid orderId, OrderStatus status, bool isDeleted)
         {
             Id=id;
             OrderId=orderId;

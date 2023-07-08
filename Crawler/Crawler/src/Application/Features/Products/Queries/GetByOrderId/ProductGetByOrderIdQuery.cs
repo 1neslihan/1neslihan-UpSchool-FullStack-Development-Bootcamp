@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Products.Queries.GetAll
 {
-    public class ProductGetAllQuery:IRequest<PaginatedList<ProductGetAllDto>>
+    public class ProductGetByOrderIdQuery:IRequest<PaginatedList<ProductGetByOrderIdDto>>
     {
-        public ProductGetAllQuery(bool? isDeleted, Guid? orderId)
+        public ProductGetByOrderIdQuery(bool? isDeleted, Guid orderId)
         {
             IsDeleted=isDeleted;
             OrderId=orderId;
@@ -18,8 +18,7 @@ namespace Application.Features.Products.Queries.GetAll
 
 
         public bool? IsDeleted { get; set; }
-
-        public Guid? OrderId { get; set; }
+        public Guid OrderId { get; set; }
         public int PageNumber { get; set; }
         public int PageSize { get; set; }
 

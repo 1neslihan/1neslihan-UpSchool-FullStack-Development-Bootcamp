@@ -17,7 +17,7 @@ namespace WebApi.Controllers
             return Ok(await Mediator.Send(command));
         }
         [HttpPost("Pull")]
-        public async Task<IActionResult> GetAllAsync(OrderEventGetAllQuery query)
+        public async Task<IActionResult> GetByOrderIdAsync(OrderEventGetByOrderIdQuery query)
         {
             return Ok(await Mediator.Send(query));
         }

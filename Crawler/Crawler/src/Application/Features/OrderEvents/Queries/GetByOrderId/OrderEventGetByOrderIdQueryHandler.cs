@@ -11,31 +11,29 @@ using System.Threading.Tasks;
 
 namespace Application.Features.OrderEvents.Queries.GetAll
 {
-    public class OrderEventGetAllQueryHandler : IRequestHandler<OrderEventGetAllQuery, List<OrderEventGetAllDto>>
+    public class OrderEventGetByOrderIdQueryHandler : IRequestHandler<OrderEventGetByOrderIdQuery, List<OrderEventGetByOrderIdDto>>
     {
         public readonly IApplicationDbContext _applicationDbContext;
 
-        public OrderEventGetAllQueryHandler(IApplicationDbContext applicationDbContext)
+        public OrderEventGetByOrderIdQueryHandler(IApplicationDbContext applicationDbContext)
         {
             _applicationDbContext=applicationDbContext;
         }
 
-        public async Task<List<OrderEventGetAllDto>> Handle(OrderEventGetAllQuery request, CancellationToken cancellationToken)
+        public async Task<List<OrderEventGetByOrderIdDto>> Handle(OrderEventGetByOrderIdQuery request, CancellationToken cancellationToken)
         {
             var dbQuery = _applicationDbContext.OrderEvents.AsQueryable();
-            //dbQuery=dbQuery.Where(x=>x.Id==request.Id);
-            dbQuery=dbQuery.Where(x => x.IsDeleted==request.IsDeleted && x.OrderId==request.OrderId);
 
-            if (request.IsDeleted.HasValue) dbQuery=dbQuery.Where(x => x.IsDeleted==request.IsDeleted.Value);
+            dbQuery= request.IsDeleted.HasValue
+                ? dbQuery.Where(x => x.IsDeleted == request.IsDeleted.Value && x.OrderId==request.OrderId)
+                : dbQuery.Where(x=>x.OrderId==request.OrderId);
 
             var orderEventDtos = await dbQuery
-                .Select(x => new OrderEventGetAllDto(x.Id, x.OrderId, x.Status, x.IsDeleted))
+                .Select(x => new OrderEventGetByOrderIdDto(x.Id, x.OrderId, x.Status, x.IsDeleted))
                 .ToListAsync(cancellationToken);
 
             return orderEventDtos;
             
-        }
-
-       
+        } 
     }
 }

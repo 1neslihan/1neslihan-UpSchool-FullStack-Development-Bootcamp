@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace Application.Features.OrderEvents.Queries.GetAll
 {
-    public class OrderEventGetAllQuery : IRequest<List<OrderEventGetAllDto>>
+    public class OrderEventGetByOrderIdQuery : IRequest<List<OrderEventGetByOrderIdDto>>
     {
         
-        public OrderEventGetAllQuery(bool? isDeleted, Guid? orderId)
+        public OrderEventGetByOrderIdQuery(bool? isDeleted, Guid orderId)
         {
             IsDeleted=isDeleted;
             OrderId=orderId;
         }
         public bool? IsDeleted { get; set; }
-        public Guid? OrderId { get; set; }
+        public Guid OrderId { get; set; }
     }
 }

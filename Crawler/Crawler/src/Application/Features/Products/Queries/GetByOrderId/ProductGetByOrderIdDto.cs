@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Products.Queries.GetAll
 {
-    public class ProductGetAllDto
+    public class ProductGetByOrderIdDto
     {
-        public ProductGetAllDto(Guid id, Guid orderId, string name, string picture, bool isOnSale, decimal price, decimal? salePrice, bool isDeleted)
+        public ProductGetByOrderIdDto(Guid id, Guid orderId, string name, string picture, bool isOnSale, decimal price, decimal? salePrice, bool isDeleted)
         {
             Id=id;
             OrderId=orderId;

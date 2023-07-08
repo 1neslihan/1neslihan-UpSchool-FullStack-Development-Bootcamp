@@ -9,7 +9,7 @@ using WebApi.Filters;
 
 namespace WebApi.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     public class OrdersController : ApiControllerBase
     {
         

@@ -59,7 +59,7 @@ builder.Services.AddSwaggerGen(setupAction =>
 builder.Services.AddSignalR();
 
 builder.Services.AddApplicationServices();
-builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Configuration, builder.Environment.WebRootPath);
 
 builder.Services.AddHttpClient();
 //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(apiUrl) });
@@ -107,6 +107,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 

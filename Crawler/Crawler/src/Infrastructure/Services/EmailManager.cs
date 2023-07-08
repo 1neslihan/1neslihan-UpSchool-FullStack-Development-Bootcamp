@@ -1,4 +1,5 @@
-﻿using Application.Common.Interfaces;
+﻿using Application.Common.Helpers;
+using Application.Common.Interfaces;
 using Application.Common.Models.Email;
 using System;
 using System.Collections.Generic;
@@ -12,12 +13,28 @@ namespace Infrastructure.Services
 {
     public class EmailManager : IEmailService
     {
+        private readonly string _wwwrootPath;
+        public EmailManager(string wwwrootPath)
+        {
+            _wwwrootPath = wwwrootPath;
+        }
+
         public void SendEmailConfirmation(SendEmailConfirmationDto sendEmailConfirmationDto)
         {
-            throw new NotImplementedException();
-            var htmlContent = $"<h4>Hi, {sendEmailConfirmationDto.Name}</h4> </br> <p>your email activation {sendEmailConfirmationDto.Link}</p>";
-            var title = $"Confirm your Email Address";
-            Send(new SendEmailDto(sendEmailConfirmationDto.Email, htmlContent, title));
+            var htmlContent = File.ReadAllText($"{_wwwrootPath}/email_templates/email_confirmation.html");
+
+            htmlContent = htmlContent.Replace("{{subject}}", MessagesHelper.Email.Confirmation.Subject);
+
+            htmlContent = htmlContent.Replace("{{name}}", MessagesHelper.Email.Confirmation.Name(sendEmailConfirmationDto.Name));
+
+            htmlContent = htmlContent.Replace("{{activationMessage}}", MessagesHelper.Email.Confirmation.ActivationMessage);
+
+            htmlContent = htmlContent.Replace("{{buttonText}}", MessagesHelper.Email.Confirmation.ButtonText);
+
+            htmlContent = htmlContent.Replace("{{buttonLink}}", MessagesHelper.Email.Confirmation.ButtonLink(sendEmailConfirmationDto.Email, sendEmailConfirmationDto.Token));
+
+            Send(new SendEmailDto(sendEmailConfirmationDto.Email, htmlContent, MessagesHelper.Email.Confirmation.Subject));
+            
         }
 
 
@@ -25,16 +42,16 @@ namespace Infrastructure.Services
         {
             MailMessage mailMessage = new MailMessage();
             sendEmailDto.EmailAddresses.ForEach(emailAddress => mailMessage.To.Add(emailAddress));
-            mailMessage.From=new MailAddress("noreply@entegraturk.com");
+            mailMessage.From=new MailAddress("epostaservisiuygulamasi@outlook.com");
             mailMessage.Subject=sendEmailDto.Title;
             mailMessage.IsBodyHtml=true;
             mailMessage.Body=sendEmailDto.Content;
             SmtpClient client = new SmtpClient();
             client.Port=587;
-            client.Host="mail.entegraturk.com";
-            client.EnableSsl = false;
+            client.Host="smtp.sendgrid.net";
+            client.EnableSsl = true;
             client.UseDefaultCredentials= false;
-            client.Credentials=new NetworkCredential("noreply@entegraturk.com", "xzx2xg4Jttrbzm5nIJ2kj1pE4l");
+            client.Credentials=new NetworkCredential("apikey", "");
             client.DeliveryMethod=SmtpDeliveryMethod.Network;
             client.Send(mailMessage);
         }

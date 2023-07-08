@@ -9,6 +9,15 @@ namespace Application.Features.Orders.Queries.GetAll
 {
     public class OrderGetAllDto
     {
+        public OrderGetAllDto(Guid id, int? requestedAmount, int? totalFoundAmount, ProductCrawlType productCrawlType, bool isDeleted)
+        {
+            Id=id;
+            RequestedAmount=requestedAmount;
+            TotalFoundAmount=totalFoundAmount;
+            ProductCrawlType=productCrawlType;
+            IsDeleted=isDeleted;
+        }
+
         public Guid Id { get; set; }
         public int? RequestedAmount { get; set; }
         public int? TotalFoundAmount { get; set; }

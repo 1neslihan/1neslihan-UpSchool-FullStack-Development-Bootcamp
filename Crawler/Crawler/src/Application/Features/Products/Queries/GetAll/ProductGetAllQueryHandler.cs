@@ -1,4 +1,5 @@
 ﻿using Application.Common.Interfaces;
+using Application.Common.Models.General;
 using Domain.Common;
 using Domain.Entities;
 using MediatR;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Products.Queries.GetAll
 {
-    public class ProductGetAllQueryHandler : IRequestHandler<ProductGetAllQuery, List<ProductGetAllDto>>
+    public class ProductGetAllQueryHandler : IRequestHandler<ProductGetAllQuery, PaginatedList<ProductGetAllDto>>
     {
         private readonly IApplicationDbContext _applicationDbContext;
 
@@ -20,39 +21,22 @@ namespace Application.Features.Products.Queries.GetAll
             _applicationDbContext=applicationDbContext;
         }
 
-        public async Task<List<ProductGetAllDto>> Handle(ProductGetAllQuery request, CancellationToken cancellationToken)
+        public async Task<PaginatedList<ProductGetAllDto>> Handle(ProductGetAllQuery request, CancellationToken cancellationToken)
         {
             var dbQuery= _applicationDbContext.Products.AsQueryable();
             //dbQuery=dbQuery.Where(x=>x.Id==request.Id);
-            dbQuery=dbQuery.Where(x=>x.IsDeleted==request.IsDeleted);
+
+            dbQuery=dbQuery.Where(x=>x.IsDeleted==request.IsDeleted && x.OrderId==request.OrderId);
 
             if(request.IsDeleted.HasValue) dbQuery=dbQuery.Where(x=>x.IsDeleted==request.IsDeleted.Value);
-
-            var products=await dbQuery.ToListAsync(cancellationToken);
-            var productDtos = MapProductsToGettAllDtos(products);
-            return productDtos.ToList();
+            
+            var productDtos= await dbQuery.Select(x => new ProductGetAllDto(x.Id, x.OrderId, x.Name, x.Picture, x.IsOnSale, x.Price, x.SalePrice, x.IsDeleted))
+                .AsQueryable()
+                .ToListAsync(cancellationToken);
+            return PaginatedList<ProductGetAllDto>.Create(productDtos, request.PageNumber, request.PageSize);
+            
         }
 
-        private IEnumerable<ProductGetAllDto> MapProductsToGettAllDtos(List<Product> products)
-        {
-            List<ProductGetAllDto> productGetAllDtos=new List<ProductGetAllDto>();
-            foreach(var product in products)
-            {
-
-                yield return new ProductGetAllDto()
-                {
-                    Id=product.Id,
-                    OrderId=product.OrderId,
-                    Name=product.Name,
-                    Picture=product.Picture,
-                    IsOnSale=product.IsOnSale,
-                    Price=product.Price,
-                    SalePrice=product.SalePrice,
-                    IsDeleted=product.IsDeleted,
-
-                };
-            }
-           
-        }
+        
     }
 }

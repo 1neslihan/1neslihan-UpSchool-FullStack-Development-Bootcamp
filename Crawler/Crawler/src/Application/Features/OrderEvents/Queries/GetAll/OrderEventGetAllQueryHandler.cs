@@ -24,31 +24,18 @@ namespace Application.Features.OrderEvents.Queries.GetAll
         {
             var dbQuery = _applicationDbContext.OrderEvents.AsQueryable();
             //dbQuery=dbQuery.Where(x=>x.Id==request.Id);
-            dbQuery=dbQuery.Where(x => x.IsDeleted==request.IsDeleted);
+            dbQuery=dbQuery.Where(x => x.IsDeleted==request.IsDeleted && x.OrderId==request.OrderId);
 
             if (request.IsDeleted.HasValue) dbQuery=dbQuery.Where(x => x.IsDeleted==request.IsDeleted.Value);
 
-            var orderEvents = await dbQuery.ToListAsync(cancellationToken);
-            var orderEventDtos = MapOrderEventsToGettAllDtos(orderEvents);
-            return orderEventDtos.ToList();
+            var orderEventDtos = await dbQuery
+                .Select(x => new OrderEventGetAllDto(x.Id, x.OrderId, x.Status, x.IsDeleted))
+                .ToListAsync(cancellationToken);
+
+            return orderEventDtos;
             
         }
 
-        private IEnumerable<OrderEventGetAllDto> MapOrderEventsToGettAllDtos(List<OrderEvent> orderEvents)
-        {
-            List<OrderEventGetAllDto> orderEventsGetAllDtos = new List<OrderEventGetAllDto>();
-            foreach (var orderEvent in orderEvents)
-            {
-
-                yield return new OrderEventGetAllDto()
-                {
-                    Id=orderEvent.Id,
-                    OrderId=orderEvent.OrderId,
-                    Status=orderEvent.Status,
-                    IsDeleted=orderEvent.IsDeleted,
-                };
-            }
-
-        }
+       
     }
 }

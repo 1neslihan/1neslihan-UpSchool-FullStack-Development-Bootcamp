@@ -31,29 +31,12 @@ namespace Application.Features.Orders.Queries.GetAll
                 ? dbQuery.Where(x => x.IsDeleted == request.IsDeleted.Value)
                 : dbQuery.Where(x => x.IsDeleted == false || x.IsDeleted == true);
 
-            var orders = await dbQuery.ToListAsync(cancellationToken);
-            var orderDtos = MapOrdersToGettAllDtos(orders);
-            return orderDtos.ToList();
+            var orderDtos= await dbQuery
+                .Select(x=> new OrderGetAllDto(x.Id, x.RequestedAmount, x.TotalFoundAmount, x.ProductCrawlType, x.IsDeleted))
+                .ToListAsync(cancellationToken);
+            return orderDtos;
         }
 
-        private IEnumerable<OrderGetAllDto> MapOrdersToGettAllDtos(List<Order> orders)
-        {
-            List<OrderGetAllDto> orderGetAllDtos = new List<OrderGetAllDto>();
-            foreach (var order in orders)
-            {
-
-                yield return new OrderGetAllDto()
-                {
-                    Id = order.Id,
-                    RequestedAmount=order.RequestedAmount,
-                    TotalFoundAmount=order.TotalFoundAmount,
-                    //UserId=order.UserId,
-                    ProductCrawlType=order.ProductCrawlType,
-                    IsDeleted=order.IsDeleted,
-
-                };
-            }
-
-        }
+        
     }
 }

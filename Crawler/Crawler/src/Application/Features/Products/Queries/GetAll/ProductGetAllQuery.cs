@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Application.Common.Models.General;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,17 +8,20 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Products.Queries.GetAll
 {
-    public class ProductGetAllQuery:IRequest<List<ProductGetAllDto>>
+    public class ProductGetAllQuery:IRequest<PaginatedList<ProductGetAllDto>>
     {
-        public ProductGetAllQuery(/*Guid id,*/ bool? isDeleted)
+        public ProductGetAllQuery(bool? isDeleted, Guid? orderId)
         {
-            //Id=id;
             IsDeleted=isDeleted;
+            OrderId=orderId;
         }
 
-        //public Guid Id { get; set; }
 
         public bool? IsDeleted { get; set; }
+
+        public Guid? OrderId { get; set; }
+        public int PageNumber { get; set; }
+        public int PageSize { get; set; }
 
         
     }

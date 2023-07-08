@@ -10,6 +10,14 @@ namespace Application.Features.OrderEvents.Queries.GetAll
 {
     public class OrderEventGetAllDto
     {
+        public OrderEventGetAllDto(Guid id, Guid orderId, OrderStatus status, bool isDeleted)
+        {
+            Id=id;
+            OrderId=orderId;
+            Status=status;
+            IsDeleted=isDeleted;
+        }
+
         public Guid Id { get; set; }
         public Guid OrderId { get; set; }
         public OrderStatus Status { get; set; }

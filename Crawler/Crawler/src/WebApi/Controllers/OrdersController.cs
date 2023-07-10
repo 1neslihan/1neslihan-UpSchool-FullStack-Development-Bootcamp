@@ -2,6 +2,7 @@
 using Application.Features.Orders.Commands.Delete;
 using Application.Features.Orders.Commands.HardDelete;
 using Application.Features.Orders.Queries.GetAll;
+using Application.Features.Orders.Queries.GetByDate;
 using Application.Features.Products.Commands.Add;
 using Application.Features.Products.Queries.GetAll;
 using Microsoft.AspNetCore.Authorization;
@@ -22,7 +23,13 @@ namespace WebApi.Controllers
         }
 
         [HttpPost("Pull")]
-        public async Task<IActionResult> GetAllAsync(OrderGetAllQuery query)
+        public async Task<IActionResult> GetByIdAsync(OrderGetByIdQuery query)
+        {
+            return Ok(await Mediator.Send(query));
+        }
+
+        [HttpPost("GetByDate")]
+        public async Task<IActionResult> GetByDateAsync(OrderGetByDateQuery query)
         {
             return Ok(await Mediator.Send(query));
         }

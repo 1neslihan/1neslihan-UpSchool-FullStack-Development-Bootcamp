@@ -15,10 +15,10 @@ namespace WebApi.Controllers
             return Ok(await Mediator.Send(command));
         }
 
-        [HttpPost("Pull")]
-        public async Task<IActionResult> GetByOrderIdAsync(ProductGetByOrderIdQuery query)
+        [HttpGet("Pull")]
+        public async Task<IActionResult> GetByOrderIdAsync(bool isDeleted,Guid orderId,int pageNumber=1,int pageSize=10)
         {
-            return Ok(await Mediator.Send(query));
+            return Ok(await Mediator.Send(new ProductGetByOrderIdQuery(isDeleted,orderId,pageNumber,pageSize)));
         }
 
         //[HttpGet("Pull/{id}")]

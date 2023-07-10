@@ -24,9 +24,7 @@ namespace Application.Features.OrderEvents.Commands.Add
             var orderEvent = new OrderEvent()
             {
                 OrderId = request.OrderId,
-                Status = request.Status,
-                
-                
+                Status = request.Status,   
             };
 
             await _applicationDbContext.OrderEvents.AddAsync(orderEvent, cancellationToken);

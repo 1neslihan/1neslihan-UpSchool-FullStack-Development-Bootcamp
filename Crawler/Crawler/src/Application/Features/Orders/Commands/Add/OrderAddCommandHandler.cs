@@ -13,10 +13,12 @@ namespace Application.Features.Orders.Commands.Add
     public class OrderAddCommandHandler : IRequestHandler<OrderAddCommand, Response<Guid>>
     {
         private readonly IApplicationDbContext _applicationDbContext;
+        private readonly ICurrentUserService _currentUserService;
 
-        public OrderAddCommandHandler(IApplicationDbContext applicationDbContext)
+        public OrderAddCommandHandler(IApplicationDbContext applicationDbContext, ICurrentUserService currentUserService = null)
         {
             _applicationDbContext=applicationDbContext;
+            _currentUserService=currentUserService;
         }
 
         public async Task<Response<Guid>> Handle(OrderAddCommand request, CancellationToken cancellationToken)
@@ -26,7 +28,7 @@ namespace Application.Features.Orders.Commands.Add
                 Id=request.Id,
                 RequestedAmount=request.RequestedAmount,
                 TotalFoundAmount=request.TotalFoundAmount,
-                //UserId=request.UserId,
+                UserId=_currentUserService.UserId,
                 ProductCrawlType=request.ProductCrawlType,
             };
 

@@ -11,6 +11,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using Application.Common.Interfaces;
+using WebApi.Services;
 
 Log.Logger= new LoggerConfiguration()
     .WriteTo.Console()
@@ -21,6 +23,10 @@ try
     var builder = WebApplication.CreateBuilder(args);
 
     builder.Host.UseSerilog();
+
+    builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+    builder.Services.AddScoped<ICurrentUserService, CurrentUserManager>();
 
     // Add services to the container.
 

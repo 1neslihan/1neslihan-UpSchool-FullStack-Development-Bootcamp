@@ -32,6 +32,7 @@ namespace Infrastructure.Services
                 new Claim(JwtRegisteredClaimNames.GivenName, firstName),
                 new Claim(JwtRegisteredClaimNames.FamilyName, lastName),
                 new Claim("ThisLooksLikeAJobForMe","CreatedByNeslihan;)"),
+                new Claim("AllahınBelası","YeterArtık"),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())   
 
             };

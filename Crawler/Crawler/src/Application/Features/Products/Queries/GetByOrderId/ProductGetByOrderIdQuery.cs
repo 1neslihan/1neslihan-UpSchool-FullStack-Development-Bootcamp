@@ -10,10 +10,12 @@ namespace Application.Features.Products.Queries.GetAll
 {
     public class ProductGetByOrderIdQuery:IRequest<PaginatedList<ProductGetByOrderIdDto>>
     {
-        public ProductGetByOrderIdQuery(bool? isDeleted, Guid orderId)
+        public ProductGetByOrderIdQuery(bool? isDeleted, Guid orderId, int pageNumber, int pageSize)
         {
             IsDeleted=isDeleted;
             OrderId=orderId;
+            PageNumber=pageNumber;
+            PageSize=pageSize;
         }
 
 

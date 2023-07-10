@@ -69,7 +69,8 @@ namespace Infrastructure.Persistence.Configurations.Identity
 
             // CreatedDate
             builder.Property(x => x.CreatedOn)
-                .IsRequired();
+                .IsRequired()
+                .ValueGeneratedOnAdd();
             // CreatedByUserId
             builder.Property(user => user.CreatedByUserId).IsRequired(false);
 

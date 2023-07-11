@@ -44,7 +44,8 @@ namespace Infrastructure.Persistence.Migrations.Identity
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     LastName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    CreatedOn = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: false),
+                    CreatedOn = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     CreatedByUserId = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     ModifiedOn = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: true),

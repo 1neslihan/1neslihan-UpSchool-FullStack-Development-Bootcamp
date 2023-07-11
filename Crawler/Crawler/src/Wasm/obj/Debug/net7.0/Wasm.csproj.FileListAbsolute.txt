@@ -3710,7 +3710,12 @@ C:\Users\DL_ne\OneDrive\Masaüstü\Crawler\Crawler\src\Wasm\obj\Debug\net7.0\Was
 C:\Users\DL_ne\OneDrive\Masaüstü\Crawler\Crawler\src\Wasm\obj\Debug\net7.0\refint\Wasm.dll
 C:\Users\DL_ne\OneDrive\Masaüstü\Crawler\Crawler\src\Wasm\obj\Debug\net7.0\Wasm.pdb
 C:\Users\DL_ne\OneDrive\Masaüstü\Crawler\Crawler\src\Wasm\obj\Debug\net7.0\ref\Wasm.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Application.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Application.pdb
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\blazor.boot.json
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\blazor.webassembly.js
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Domain.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Domain.pdb
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\dotnet.7.0.7.8jzvzqjdvi.js
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\dotnet.timezones.blat
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\dotnet.wasm
@@ -3929,6 +3934,8 @@ C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcam
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Xml.XmlSerializer.dll
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Xml.XPath.dll
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Xml.XPath.XDocument.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Wasm.dll
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Wasm.pdb
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\WindowsBase.dll
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.IO.FileSystem.AccessControl.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Security.Principal.Windows.dll.gz
@@ -3943,10 +3950,12 @@ C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcam
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Xml.XPath.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Private.Xml.Linq.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Caching.Abstractions.dll.gz
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Wasm.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.IO.Compression.FileSystem.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Microsoft.EntityFrameworkCore.Abstractions.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Diagnostics.Tools.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Linq.Parallel.dll.gz
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Domain.pdb.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\MediatR.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\FluentValidation.DependencyInjectionExtensions.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Threading.ThreadPool.dll.gz
@@ -3989,6 +3998,7 @@ C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcam
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Runtime.Serialization.Primitives.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Memory.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Xml.XmlDocument.dll.gz
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Application.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Xml.Linq.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Resources.Writer.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.ComponentModel.TypeConverter.dll.gz
@@ -4017,6 +4027,7 @@ C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcam
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Xml.Serialization.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Caching.Memory.dll.gz
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Wasm.pdb.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.IO.IsolatedStorage.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Reflection.Primitives.dll.gz
@@ -4065,6 +4076,7 @@ C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcam
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Net.Http.Json.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Windows.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Configuration.dll.gz
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Domain.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Runtime.Extensions.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\mscorlib.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.ComponentModel.dll.gz
@@ -4083,6 +4095,7 @@ C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcam
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Xml.ReaderWriter.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Runtime.InteropServices.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Security.Cryptography.dll.gz
+C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Application.pdb.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.IO.Compression.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.Transactions.dll.gz
@@ -4150,19 +4163,6 @@ C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcam
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Microsoft.JSInterop.WebAssembly.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\System.AppContext.dll.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Microsoft.VisualBasic.Core.dll.gz
-C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Application.dll
-C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Application.pdb
-C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\blazor.boot.json
-C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Domain.dll
-C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Domain.pdb
-C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Wasm.dll
-C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Wasm.pdb
-C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Wasm.dll.gz
-C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Domain.pdb.gz
-C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Application.dll.gz
-C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Wasm.pdb.gz
-C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Domain.dll.gz
-C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\wwwroot\_framework\Application.pdb.gz
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\Wasm.staticwebassets.runtime.json
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\Wasm.dll
 C:\Users\DL_ne\OneDrive\Masaüstü\Github\UpSchool-FullStack-Development-Bootcamp\Crawler\Crawler\src\Wasm\bin\Debug\net7.0\Wasm.pdb

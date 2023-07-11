@@ -65,7 +65,7 @@ namespace Infrastructure.Persistence.Configurations.Identity
             builder.HasMany<UserRole>().WithOne().HasForeignKey(ur => ur.UserId).IsRequired();
 
             // Each User can have many Orders
-            //builder.HasMany<Order>().WithOne().HasForeignKey(x => x.UserId).IsRequired();
+            builder.HasMany<Order>().WithOne().HasForeignKey(x => x.UserId).IsRequired();
 
             // CreatedDate
             builder.Property(x => x.CreatedOn)

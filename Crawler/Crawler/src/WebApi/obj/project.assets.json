@@ -3935,6 +3935,7 @@
       "Microsoft.AspNetCore.OpenApi >= 7.0.8",
       "Microsoft.EntityFrameworkCore >= 7.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.8",
+      "Pomelo.EntityFrameworkCore.MySql >= 7.0.0",
       "Serilog.AspNetCore >= 7.0.0",
       "Serilog.Sinks.File >= 5.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
@@ -4010,6 +4011,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.8, )"
+          },
+          "Pomelo.EntityFrameworkCore.MySql": {
+            "target": "Package",
+            "version": "[7.0.0, )"
           },
           "Serilog.AspNetCore": {
             "target": "Package",

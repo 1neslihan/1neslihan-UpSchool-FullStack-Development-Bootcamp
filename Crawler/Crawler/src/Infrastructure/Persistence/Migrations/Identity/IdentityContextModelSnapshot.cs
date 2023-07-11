@@ -88,6 +88,7 @@ namespace Infrastructure.Persistence.Migrations.Identity
                         .HasColumnType("longtext");
 
                     b.Property<DateTimeOffset>("CreatedOn")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Email")

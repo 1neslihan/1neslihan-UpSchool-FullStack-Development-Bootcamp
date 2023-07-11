@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infrastructure.Persistence.Migrations.Application
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class CurrentUserAdded : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -22,6 +22,8 @@ namespace Infrastructure.Persistence.Migrations.Application
                     Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
                     RequestedAmount = table.Column<int>(type: "int", nullable: true),
                     TotalFoundAmount = table.Column<int>(type: "int", nullable: true),
+                    UserId = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     ProductCrawlType = table.Column<int>(type: "int", nullable: false),
                     CreatedOn = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),

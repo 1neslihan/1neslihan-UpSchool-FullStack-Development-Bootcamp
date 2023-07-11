@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Persistence.Migrations.Identity
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20230703141511_InitialCreate")]
+    [Migration("20230711082424_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -91,6 +91,7 @@ namespace Infrastructure.Persistence.Migrations.Identity
                         .HasColumnType("longtext");
 
                     b.Property<DateTimeOffset>("CreatedOn")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Email")

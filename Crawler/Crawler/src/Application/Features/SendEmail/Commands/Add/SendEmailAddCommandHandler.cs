@@ -32,5 +32,6 @@ namespace Application.Features.SendEmail.Commands.Add
 
             return new SendEmailAddDto(request.FirstName, request.LastName, request.Email, request.Link);
         }
+
     }
 }

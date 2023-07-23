@@ -3,75 +3,89 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import LoginPage from "./pages/LoginPage";
-import OrderTrackPage from "./pages/OrderTrackPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import { useState, useEffect } from "react";
-import { OrderGetByIdDto } from "./types/OrderTypes";
-import { LocalJwt, LocalUser } from "./types/AuthTypes";
+import { useState } from "react";
+import {
+  OrderGetByDateDto,
+} from "./types/OrderTypes";
+import { LocalUser } from "./types/AuthTypes";
 import { ToastContainer } from "react-toastify";
-import { useNavigate } from "react-router-dom";
-import { getClaimsFromJwt } from "./utils/jwtHelper";
-import { AppUserContext, OrdersContext } from "./context/StateContext";
-import { dummyOrders } from "./utils/dummyOrders";
+import {
+  AppUserContext,
+  OrdersGetDateContext,
+} from "./context/StateContext";
 import ProtectedRoute from "./components/ProdectedRoute";
+import Records from "./pages/Records";
+import LiveTrack from "./pages/LiveTrack";
+import Settings from "./pages/Settings";
+import SocialLogin from "./pages/SocialLogin";
+import TokenValidityChecker from "./components/TokenValidityChecker";
+import HomePage from "./pages/HomePage";
+import RegisterPage from "./pages/RegisterPage";
+import UsersPage from "./pages/UsersPage";
 
 function App() {
-  const [orders, setOrders] = useState<OrderGetByIdDto[]>(dummyOrders);
+  const [ordersByDate, setOrdersByDate] = useState<OrderGetByDateDto[]>([]);
   const [appUser, setAppUser] = useState<LocalUser | undefined>(undefined);
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    const jwtJson = localStorage.getItem("crawler_user");
-
-    if (!jwtJson) {
-      navigate("/login");
-
-      return;
-    }
-
-    const localJwt: LocalJwt = JSON.parse(jwtJson);
-
-    const { uid, email, given_name, family_name } = getClaimsFromJwt(
-      localJwt.accessToken
-    );
-
-    const expires: string = localJwt.expires;
-
-    setAppUser({
-      id: uid,
-      email,
-      firstName: given_name,
-      lastName: family_name,
-      expires,
-      accessToken: localJwt.accessToken,
-    });
-  }, []);
 
   return (
     <>
       <AppUserContext.Provider value={{ appUser, setAppUser }}>
-        <OrdersContext.Provider value={{ orders, setOrders }}>
+        <OrdersGetDateContext.Provider
+          value={{ ordersByDate, setOrdersByDate }}
+        >
           <ToastContainer />
-          <Navbar />
+          <TokenValidityChecker />
           <Routes>
             <Route
               path="/"
               element={
                 <ProtectedRoute>
-                  <OrderTrackPage />
+                  <Records />
                 </ProtectedRoute>
               }
             />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="*" element={
-              <ProtectedRoute>
-                <NotFoundPage />
-              </ProtectedRoute>
-            } />
+            <Route path="/social-login" element={<SocialLogin />} />
+            <Route path="/homepage" element={<HomePage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route
+              path="/livetrack"
+              element={
+                <ProtectedRoute>
+                  <LiveTrack />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/settings"
+              element={
+                <ProtectedRoute>
+                  <Settings />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/users"
+              element={
+                <ProtectedRoute>
+                  <UsersPage />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="*"
+              element={
+                <ProtectedRoute>
+                  <NotFoundPage />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
-        </OrdersContext.Provider>
+        </OrdersGetDateContext.Provider>
       </AppUserContext.Provider>
     </>
   );

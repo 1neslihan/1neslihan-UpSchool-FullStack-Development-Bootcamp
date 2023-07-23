@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     public class OrderEventsController : ApiControllerBase
     {
         [HttpPost("Add")]

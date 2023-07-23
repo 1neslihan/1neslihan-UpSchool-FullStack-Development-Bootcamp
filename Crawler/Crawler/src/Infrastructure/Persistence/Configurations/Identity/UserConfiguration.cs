@@ -31,6 +31,15 @@ namespace Infrastructure.Persistence.Configurations.Identity
             builder.Property(user => user.LastName).IsRequired();
             builder.Property(user => user.LastName).HasMaxLength(50);
 
+            //EmailNotification
+            builder.Property(user => user.EmailNotification).IsRequired().HasDefaultValueSql("1");
+            builder.HasIndex(user => user.EmailNotification);
+
+            //ToasterNotification
+            builder.Property(user => user.ToasterNotification).IsRequired().HasDefaultValueSql("1");
+            builder.HasIndex(user => user.ToasterNotification);
+
+
             // A concurrency token for use with the optimistic concurrency checking
             builder.Property(u => u.ConcurrencyStamp).IsConcurrencyToken();
 

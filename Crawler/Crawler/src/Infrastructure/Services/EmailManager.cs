@@ -1,6 +1,7 @@
 ﻿using Application.Common.Helpers;
 using Application.Common.Interfaces;
 using Application.Common.Models.Email;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,47 @@ namespace Infrastructure.Services
             
         }
 
+        public void SendOrderDetails(SendOrderDetailsDto sendOrderDetailsDto)
+        {
+            var htmlContent = File.ReadAllText($"{_wwwrootPath}/email_templates/email_orderDetails.html");
+
+            htmlContent=htmlContent.Replace("{{UserName}}", sendOrderDetailsDto.Name);
+
+            htmlContent=htmlContent.Replace("{{OrderId}}", sendOrderDetailsDto.OrderId);
+
+            htmlContent=htmlContent.Replace("{{GenerateDate}}", sendOrderDetailsDto.GenerateDate);
+
+
+            StringBuilder ProductsRowsBuilder = new StringBuilder();
+            foreach (var product in sendOrderDetailsDto.Products)
+            {
+                ProductsRowsBuilder.Append("<tr>");
+                ProductsRowsBuilder.Append($"<td>{product.Name}</td>");
+                ProductsRowsBuilder.Append($"<td>{product.IsOnSale}</td>");
+                ProductsRowsBuilder.Append($"<td>{product.Price}</td>");
+                ProductsRowsBuilder.Append($"<td>{product.SalePrice}</td>");
+                ProductsRowsBuilder.Append("</tr>");
+            }
+
+            htmlContent = htmlContent.Replace("{{ProductsRows}}", ProductsRowsBuilder.ToString());
+
+            StringBuilder OrderEventRowsBuilder = new StringBuilder();
+            foreach(var orderEvent in sendOrderDetailsDto.OrderEvents)
+            {
+                OrderEventRowsBuilder.Append("<tr>");
+                OrderEventRowsBuilder.Append($"<td>{orderEvent.Status}</td>");
+                OrderEventRowsBuilder.Append($"<td>{orderEvent.OrderEventCreatedOn}</td>");
+                OrderEventRowsBuilder.Append("</tr>");
+
+            }
+
+            htmlContent=htmlContent.Replace("{{OrderEventsRows}}", OrderEventRowsBuilder.ToString()) ;
+
+            Send(new SendEmailDto(sendOrderDetailsDto.Email, htmlContent, "Order Details"));
+        }
+
+
+
 
         private void Send (SendEmailDto sendEmailDto)
         {
@@ -57,3 +99,7 @@ namespace Infrastructure.Services
         }
     }
 }
+
+
+
+

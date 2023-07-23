@@ -12,3 +12,12 @@ export function getClaimsFromJwt(token: string) {
 
   return { uid, email, given_name, family_name, jti };
 }
+
+// jwtHelper.ts dosyasında isTokenExpired fonksiyonunu tanımlayın
+
+export function isTokenExpired(expiration: string): boolean {
+  const expirationDate = new Date(expiration).getTime();
+  const currentDate = new Date().getTime();
+
+  return expirationDate <= currentDate;
+}

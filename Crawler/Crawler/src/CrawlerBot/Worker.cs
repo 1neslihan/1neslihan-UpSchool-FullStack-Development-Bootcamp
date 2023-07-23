@@ -11,6 +11,9 @@ using Application.Features.Products.Commands.Add;
 using Application.Common.Models.SignalR;
 using Newtonsoft.Json;
 using System.Text;
+using System.Net.Http.Headers;
+using Application.Features.Orders.Queries.GetAll;
+using Application.Features.SendEmail.Commands.OrderDetails;
 
 namespace CrawlerBot
 {
@@ -19,10 +22,12 @@ namespace CrawlerBot
         private readonly ILogger<Worker> _logger;
         private readonly string _dataTransferHub = "https://localhost:7090/Hubs/DataTransferHub";
         private readonly HubConnection _DataTransferHubConnection;
+        public FormattedLogDto formattedLogDto = new FormattedLogDto();
 
         int customAmount;
         int selectedAmount;
         int requestedAmount;
+        string token;
 
         public Worker(ILogger<Worker> logger)
         {
@@ -37,10 +42,11 @@ namespace CrawlerBot
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             // SignalR mesajlarýný bekleyin
-            _DataTransferHubConnection.On<int, int>("ReceiveDataFromBlazor", (customAmount, selectedOption) =>
+            _DataTransferHubConnection.On<int, int, string>("ReceiveDataFromBlazor", (customAmount, selectedOption, token) =>
             {
                 this.customAmount=customAmount;
                 selectedAmount=selectedOption;
+                this.token= token;
                 Crawler();
 
             });
@@ -56,6 +62,8 @@ namespace CrawlerBot
 
         async Task Crawler()
         {
+            Console.WriteLine("Veri geldi");
+            Console.WriteLine(token);
             var orderAddRequest = new OrderAddCommand();
             using var httpClient = new HttpClient();
             requestedAmount=customAmount;
@@ -65,7 +73,7 @@ namespace CrawlerBot
                 orderAddRequest = new OrderAddCommand()
                 {
                     Id=Guid.NewGuid(),
-                    //RequestedAmount=this.customAmount,
+                    RequestedAmount=this.customAmount,
                     ProductCrawlType=ProductCrawlType.All
                 };
             }
@@ -74,6 +82,7 @@ namespace CrawlerBot
                 orderAddRequest = new OrderAddCommand()
                 {
                     Id=Guid.NewGuid(),
+                    RequestedAmount=this.customAmount,
                     ProductCrawlType=ProductCrawlType.OnDiscount
                 };
             }
@@ -83,11 +92,12 @@ namespace CrawlerBot
                 orderAddRequest = new OrderAddCommand()
                 {
                     Id=Guid.NewGuid(),
+                    RequestedAmount=this.customAmount,
                     ProductCrawlType=ProductCrawlType.NonDiscount
                 };
             }
 
-            var orderAddResponse = await SendHttpPostRequest<OrderAddCommand, object>(httpClient, "https://localhost:7090/api/Orders/Add", orderAddRequest);
+            var orderAddResponse = await SendHttpPostRequest<OrderAddCommand, object>(httpClient, "https://localhost:7090/api/Orders/Add", orderAddRequest, token);
             Guid orderId = orderAddRequest.Id;
             await SendLogNotification("New order generated");
 
@@ -102,7 +112,7 @@ namespace CrawlerBot
                 Status=OrderStatus.BotStarted,
             };
 
-            var orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest);
+            var orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest, token);
 
             //SignalR ile verileri hub'a gönderme
             await SendLogNotification(orderEventAddRequest.Status.ToString());
@@ -119,13 +129,14 @@ namespace CrawlerBot
                 Status=OrderStatus.CrawlingStarted,
             };
 
-            orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest);
+            orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest, token);
             await SendLogNotification(orderEventAddRequest.Status.ToString());
 
             for (int i = 1; i<pagination.Count; i++)
             {
                 driver.Navigate().GoToUrl($"https://4teker.net/?currentPage={i}");
                 Console.WriteLine($"{i}.Sayfa");
+                await SendLogNotification($"Bot currently on Page {i}");
                 Console.WriteLine();
                 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);
                 ReadOnlyCollection<IWebElement> productCard = driver.FindElements(By.CssSelector(".col.mb-5"));
@@ -168,6 +179,14 @@ namespace CrawlerBot
                             Console.WriteLine("Ürün Resmi URL'si: " + productImageURL);
                             Console.WriteLine("Ürün OrderId'si " + orderAddRequest.Id.ToString());
                             Console.WriteLine("----------------------------");
+                            formattedLogDto.product_Name=productName;
+                            formattedLogDto.product_isDiscounted=$"{isDiscounted.ToString()}";
+                            formattedLogDto.product_discountedPrice=$"{discountedPrice.ToString()}$";
+                            formattedLogDto.product_originalPrice=$"{originalPrice.ToString()}$";
+                            formattedLogDto.product_imageURL=productImageURL;
+
+                            await SendDetails(formattedLogDto);
+
                             var productAddRequest = new ProductAddCommand()
                             {
 
@@ -180,7 +199,7 @@ namespace CrawlerBot
 
                             };
 
-                            var productAddResponse = await SendHttpPostRequest<ProductAddCommand, object>(httpClient, "https://localhost:7090/api/Products/Add", productAddRequest);
+                            var productAddResponse = await SendHttpPostRequest<ProductAddCommand, object>(httpClient, "https://localhost:7090/api/Products/Add", productAddRequest, token);
                             productCounter++;
                             howMany++;
                         }
@@ -194,6 +213,15 @@ namespace CrawlerBot
                             Console.WriteLine("Ürün Resmi URL'si: " + productImageURL);
                             Console.WriteLine("----------------------------");
 
+                            formattedLogDto.product_Name=productName;
+                            formattedLogDto.product_isDiscounted=isDiscounted.ToString();
+                            formattedLogDto.product_discountedPrice="No data";
+                            formattedLogDto.product_originalPrice=$"{originalPrice.ToString()}$";
+                            formattedLogDto.product_imageURL=productImageURL;
+
+                            await SendDetails(formattedLogDto);
+
+
                             var productAddRequest = new ProductAddCommand()
                             {
                                 // ProductAddCommand nesnesinin diðer özellikleri
@@ -206,7 +234,7 @@ namespace CrawlerBot
 
                             };
 
-                            var productAddResponse = await SendHttpPostRequest<ProductAddCommand, object>(httpClient, "https://localhost:7090/api/Products/Add", productAddRequest);
+                            var productAddResponse = await SendHttpPostRequest<ProductAddCommand, object>(httpClient, "https://localhost:7090/api/Products/Add", productAddRequest, token);
                             productCounter++;
                             howMany++;
                         }
@@ -217,6 +245,7 @@ namespace CrawlerBot
 
                     }
                     Console.WriteLine($"{productCard.Count} element found. {howMany} of them is scrapped");
+                    await SendLogNotification($"Bot {productCard.Count} element found. {howMany} of them is scrapped");
                     Console.WriteLine();
                     Console.WriteLine();
                 }
@@ -227,7 +256,7 @@ namespace CrawlerBot
                         OrderId= orderId,
                         Status=OrderStatus.CrawlingFailed,
                     };
-                    orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest);
+                    orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest, token);
 
                     await SendLogNotification(orderEventAddRequest.Status.ToString());
                 }
@@ -244,7 +273,7 @@ namespace CrawlerBot
                 OrderId= orderId,
                 Status=OrderStatus.CrawlingCompleted,
             };
-            orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest);
+            orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest, token);
 
             await SendLogNotification(orderEventAddRequest.Status.ToString());
 
@@ -254,14 +283,23 @@ namespace CrawlerBot
                 OrderId= orderId,
                 Status=OrderStatus.OrderCompleted,
             };
-            orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest);
+            orderEventAddResponse = await SendHttpPostRequest<OrderEventAddCommand, object>(httpClient, "https://localhost:7090/api/OrderEvents/Add", orderEventAddRequest, token);
             await SendLogNotification(orderEventAddRequest.Status.ToString());
+
+            var emailSenderForOrderDetailsRequest = new OrderGetByIdQuery(false, orderId);
+
+            var emailSenderForOrderDetailsResponse = await SendHttpPostRequest<OrderGetByIdQuery, object>(httpClient, "https://localhost:7090/api/Orders/Pull",emailSenderForOrderDetailsRequest, token);
+
         }
 
-        async Task<TResponse> SendHttpPostRequest<TRequest, TResponse>(HttpClient httpClient, string url, TRequest payload)
+        async Task<TResponse> SendHttpPostRequest<TRequest, TResponse>(HttpClient httpClient, string url, TRequest payload, string jwtToken)
         {
             var jsonPayload = JsonConvert.SerializeObject(payload);
             var httpContent = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
+
+            // Authorization baþlýðýný ayarla
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+
 
             var response = await httpClient.PostAsync(url, httpContent);
             response.EnsureSuccessStatusCode();
@@ -290,6 +328,24 @@ namespace CrawlerBot
             {
                 await hubConnection.StartAsync(); // HubConnection'ý baþlatma
                 await hubConnection.InvokeAsync("SendLogNotificationAsync", log); // Metodu çaðýrma
+            }
+            finally
+            {
+                await hubConnection.DisposeAsync(); // HubConnection'ý kapatma ve kaynaklarý temizleme
+            }
+        }
+
+        async Task SendDetails(FormattedLogDto details)
+        {
+            var hubConnection = new HubConnectionBuilder()
+                .WithUrl("https://localhost:7090/Hubs/UserLogHub") // Hub URL'sini burada belirtmelisiniz
+                .WithAutomaticReconnect()
+                .Build();
+
+            try
+            {
+                await hubConnection.StartAsync(); // HubConnection'ý baþlatma
+                await hubConnection.InvokeAsync("OrderDetailsAsync", details); // Metodu çaðýrma
             }
             finally
             {

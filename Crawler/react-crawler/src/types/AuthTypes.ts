@@ -12,6 +12,13 @@ export type AuthLoginCommand = {
     password:string,
 }
 
+export type AuthRegisterCommand = {
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string,
+}
+
 export type LocalJwt={
     accessToken:string,
     expires:string,

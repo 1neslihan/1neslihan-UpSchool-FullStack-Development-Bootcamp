@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BKfDsFzPtNy3Obqph1EB1xUgv5cx42PkAaiNLV/yPKo=",
+  "Hash": "/at8smcW5iK00qVPYnbior/2HLON2BGbXCzSnzj/8GM=",
   "Source": "WebApi",
   "BasePath": "_content/WebApi",
   "Mode": "Default",
@@ -32,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\email_templates\\email_confirmation.html"
+    },
+    {
+      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\WebApi\\wwwroot\\email_templates\\email_orderDetails.html",
+      "SourceId": "WebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\WebApi\\wwwroot\\",
+      "BasePath": "_content/WebApi",
+      "RelativePath": "email_templates/email_orderDetails.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\email_templates\\email_orderDetails.html"
     }
   ]
 }

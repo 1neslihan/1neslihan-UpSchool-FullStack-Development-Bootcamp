@@ -31,8 +31,7 @@ namespace Infrastructure.Services
                 new Claim(JwtRegisteredClaimNames.Sub, userId),
                 new Claim(JwtRegisteredClaimNames.GivenName, firstName),
                 new Claim(JwtRegisteredClaimNames.FamilyName, lastName),
-                new Claim("ThisLooksLikeAJobForMe","CreatedByNeslihan;)"),
-                new Claim("AllahınBelası","YeterArtık"),
+                new Claim("Bismillahirrahmanirrahim","Kaliteye_Hoşgeldiniz!"),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())   
 
             };

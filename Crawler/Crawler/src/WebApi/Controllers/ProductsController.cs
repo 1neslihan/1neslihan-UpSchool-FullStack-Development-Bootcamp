@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     public class ProductsController : ApiControllerBase
     {
         [HttpPost("Add")]

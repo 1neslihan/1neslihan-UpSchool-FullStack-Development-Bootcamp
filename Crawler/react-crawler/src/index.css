@@ -25,12 +25,37 @@ html,
   font-family: 'Montserrat', sans-serif;
 }
 
+.PlayFair{
+  font-family: 'Playfair Display', serif;
+}
+
+.Bungee-Shade{
+  font-family: 'Bungee Shade', cursive;
+}
+
+
 body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.status-message {
+  animation: blinkEffect 2s steps(20, end) forwards;
+}
+
+@keyframes blinkEffect {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 

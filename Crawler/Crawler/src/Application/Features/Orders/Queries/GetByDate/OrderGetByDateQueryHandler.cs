@@ -27,35 +27,41 @@ namespace Application.Features.Orders.Queries.GetByDate
                 .AsNoTracking()
                 .Where(x => x.UserId == _currentUserService.UserId);
 
-            if (request.StartDate.HasValue && request.EndDate.HasValue)
-            {
-                dbQuery = dbQuery.Where(x => x.CreatedOn.Date >= request.StartDate.Value.Date && x.CreatedOn.Date <= request.EndDate.Value.Date);
-            }
+            //if (request.StartDate.HasValue && request.EndDate.HasValue)
+            //{
+            //    dbQuery = dbQuery.Where(x => x.CreatedOn.Date >= request.StartDate.Value.Date && x.CreatedOn.Date <= request.EndDate.Value.Date);
+            //}
 
-            else if (request.StartDate.HasValue)
-            {
-                dbQuery = dbQuery.Where(x => x.CreatedOn.Date >= request.StartDate.Value.Date && x.CreatedOn.Date <= DateTime.Now.Date);
-            }
+            //else if (request.StartDate.HasValue)
+            //{
+            //    dbQuery = dbQuery.Where(x => x.CreatedOn.Date >= request.StartDate.Value.Date && x.CreatedOn.Date <= DateTime.Now.Date);
+            //}
 
-            else if (request.EndDate.HasValue)
-            {
-                dbQuery = dbQuery.Where(x => x.CreatedOn.Date >= DateTime.MinValue.Date && x.CreatedOn.Date <= request.EndDate.Value.Date);
-            }
+            //else if (request.EndDate.HasValue)
+            //{
+            //    dbQuery = dbQuery.Where(x => x.CreatedOn.Date >= DateTime.MinValue.Date && x.CreatedOn.Date <= request.EndDate.Value.Date);
+            //}
 
-            else if(request.StartDate.HasValue && request.EndDate.HasValue && request.StartDate.Value.Date == request.EndDate.Value.Date)
-            {
-                var date = request.StartDate.Value.Date;
-                dbQuery = dbQuery.Where(x => x.CreatedOn.Date == date);
-            }
+            //else if(request.StartDate.HasValue && request.EndDate.HasValue && request.StartDate.Value.Date == request.EndDate.Value.Date)
+            //{
+            //    var date = request.StartDate.Value.Date;
+            //    dbQuery = dbQuery.Where(x => x.CreatedOn.Date == date);
+            //}
 
             dbQuery = request.IsDeleted.HasValue
                 ? dbQuery.Where(x => x.IsDeleted == request.IsDeleted.Value)
                 : dbQuery.Where(x => x.IsDeleted == false || x.IsDeleted == true);
 
+            dbQuery=dbQuery.OrderByDescending(x => x.CreatedOn);
+
+
+
             var order = await dbQuery
                 .Include(x => x.OrderEvents)
                 .Include(x => x.Products)
                 .ToListAsync(cancellationToken);
+
+
 
             var orderRecords = order.Select(order => new OrderGetByDateDto
             {

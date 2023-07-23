@@ -1,6 +1,7 @@
 ﻿using Application.Features.Orders.Commands.Add;
 using Application.Features.Orders.Commands.Delete;
 using Application.Features.Orders.Commands.HardDelete;
+using Application.Features.Orders.Commands.UndoDelete;
 using Application.Features.Orders.Queries.GetAll;
 using Application.Features.Orders.Queries.GetByDate;
 using Application.Features.Products.Commands.Add;
@@ -12,7 +13,7 @@ using WebApi.Filters;
 
 namespace WebApi.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     public class OrdersController : ApiControllerBase
     {
         
@@ -35,7 +36,15 @@ namespace WebApi.Controllers
         }
 
         [HttpPut("SoftDelete")]
-        public async Task<IActionResult> SoftDeleteAsync(Guid id, OrderSoftDeleteCommand command)
+        public async Task<IActionResult> SoftDeleteAsync(OrderSoftDeleteCommand command)
+        {
+
+            return Ok(await Mediator.Send(command));
+
+        }
+
+        [HttpPut("UndoDelete")]
+        public async Task<IActionResult> UndoDeleteAsync(OrderUndoDeleteCommand command)
         {
 
             return Ok(await Mediator.Send(command));
@@ -43,7 +52,7 @@ namespace WebApi.Controllers
         }
 
         [HttpDelete("HardDelete")]
-        public async Task<IActionResult> HardDeleteAsync(Guid id, OrderHardDeleteCommand command)
+        public async Task<IActionResult> HardDeleteAsync(OrderHardDeleteCommand command)
         {
 
             return Ok(await Mediator.Send(command));

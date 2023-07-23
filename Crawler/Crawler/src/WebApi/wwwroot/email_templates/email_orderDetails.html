@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Details</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #C498F3;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+        <h1>Order Details</h1>
+        <p>Hello {{UserName}},</p>
+        <p>Here are the details of your order <span style="font-weight: bold;">{{OrderId}}</span> </p>
+        <p>Generate date of order: <span style="font-weight: bold">{{GenerateDate}}</span> </p>
+        <br />
+        <table>
+            <thead style="background-color: #F2F1F4">
+                <tr>
+                    <th>Product Name</th>
+                    <th>Is on Sale</th>
+                    <th>Price</th>
+                    <th>Sale Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Siparişe ait her bir ürün için ayrı bir satır oluşturun -->
+                {{ProductsRows}}
+            </tbody>
+        </table>
+        <br />
+        <h5>These are the events belong to this order:</h5>
+        <br />
+        <table>
+            <thead style="background-color: #F2F1F4">
+                <tr>
+                    <th>Order Status</th>
+                    <th>Completed Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Siparişe ait her bir ürün için ayrı bir satır oluşturun -->
+                {{OrderEventsRows}}
+            </tbody>
+        </table>
+
+        <p>Total Amount: {{TotalAmount}}</p>
+        <p>Thank you for using our service.</p>
+        <p>Best regards,</p>
+        <p>Your Company Name</p>
+   
+</body>
+</html>

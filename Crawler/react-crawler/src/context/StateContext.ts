@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import {createContext} from "react"
+import React, {createContext} from "react"
 import { LocalUser } from "../types/AuthTypes"
-import { OrderGetByIdDto } from "../types/OrderTypes";
+import { OrderGetByDateDto, OrderGetByIdDto, OrderSoftDeleteCommandDto } from "../types/OrderTypes";
 
 export type AppUserContextType = {
     appUser:LocalUser | undefined,
@@ -23,3 +23,15 @@ export const OrdersContext= createContext<OrdersContextType>({
     orders:[],
     setOrders:()=>{},
 })
+
+export type OrdersDateContextType={
+    ordersByDate: OrderGetByDateDto[],
+    setOrdersByDate:React.Dispatch<React.SetStateAction<OrderGetByDateDto[]>>,
+}
+
+export const OrdersGetDateContext=createContext<OrdersDateContextType>({
+    ordersByDate:[],
+    setOrdersByDate:()=>{},
+})
+
+

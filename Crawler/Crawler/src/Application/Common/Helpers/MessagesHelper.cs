@@ -18,6 +18,8 @@ namespace Application.Common.Helpers
                 public static string ButtonLink(string email, string emailToken) => $"https://crawler.app/account/account-activation?email={email}&token={emailToken}";
                 public static string Name (string firstName) => $"Hi {firstName}";
             }
+
+            
         }
     }
 }

@@ -24,6 +24,7 @@ Crawler Bot is a C# .NET project designed to scrape product information from an 
 - MySQL for Database Management
 - Background Worker for Web Scraping
 - SignalR for Real-Time Communication
+- Selenium for bots
 
 ## Front-end Technologies
 

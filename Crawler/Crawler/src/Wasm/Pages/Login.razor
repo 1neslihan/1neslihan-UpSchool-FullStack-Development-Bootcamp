@@ -1,0 +1,51 @@
+﻿@page "/login";
+
+<PageTitle>Login</PageTitle>
+
+<h3>Login</h3>
+
+<div>
+    <form>
+        <div style="width:25%;">
+            <label for="email">Email Address</label>
+            <input type="email" @bind="email" @oninput="HandleEmailInput" name="email" class="form-control" id="email">
+        </div>
+        <div style="width:25%;">
+            <label for="password">Password</label>
+            <input type="password" @bind="password" @oninput="HandlePasswordInput" name="password" class="form-control" id="password">
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary" @onclick="HandleLogin">
+                Login
+            </button>
+
+        </div>
+    </form>
+</div>
+
+@code {
+    private string email;
+    private string password;
+
+    private void HandleLogin(MouseEventArgs e)
+    {
+        // email ve password değerleri burada kullanılabilir
+        // Örneğin: Veritabanı ile karşılaştırma, kimlik doğrulama işlemleri, vb.
+        Console.WriteLine("email: ",email);
+        Console.WriteLine("password: ",password);
+    }
+
+    private void HandleEmailInput(ChangeEventArgs e)
+    {
+        email = e.Value.ToString();
+        Console.WriteLine($"Email: {email}");
+    }
+
+    private void HandlePasswordInput(ChangeEventArgs e)
+    {
+        password = e.Value.ToString();
+        Console.WriteLine($"Password: {password}");
+    }
+
+}

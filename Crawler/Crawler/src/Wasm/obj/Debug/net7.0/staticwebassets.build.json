@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "q1Jh8YD5Iy0WEMyEHGhhuI2kCggbcxYjpsUWWJwLgtk=",
+  "Hash": "s7Bso1dNhPXs/fWgVsxMQZtb3f+OKUcub2EjR0tjOSw=",
   "Source": "Wasm",
   "BasePath": "/",
   "Mode": "Root",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\DL_ne\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.5\\build\\net7.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "SourceId": "Wasm",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\DL_ne\\.nuget\\packages\\blazored.localstorage\\4.3.0\\lib\\net7.0\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Domain.dll",
@@ -320,7 +337,24 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\DL_ne\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Authorization.dll"
+      "OriginalItemSpec": "C:\\Users\\DL_ne\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.8\\lib\\net7.0\\Microsoft.AspNetCore.Authorization.dll"
+    },
+    {
+      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "SourceId": "Wasm",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\DL_ne\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\7.0.8\\lib\\net7.0\\Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
@@ -337,7 +371,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\DL_ne\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Components.dll"
+      "OriginalItemSpec": "C:\\Users\\DL_ne\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.8\\lib\\net7.0\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
@@ -490,7 +524,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\DL_ne\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Metadata.dll"
+      "OriginalItemSpec": "C:\\Users\\DL_ne\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.8\\lib\\net7.0\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Client.Core.dll",
@@ -4216,6 +4250,23 @@
       "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.Tracing.dll"
     },
     {
+      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\2MZjQshH.gz",
+      "SourceId": "Wasm",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
+    },
+    {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\3Ce8pPNY.gz",
       "SourceId": "Wasm",
       "SourceType": "Computed",
@@ -4879,23 +4930,6 @@
       "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.FileSystem.DriveInfo.dll"
     },
     {
-      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\D+YFDiyA.gz",
-      "SourceId": "Wasm",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
-    },
-    {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\DBiMdTDJ.gz",
       "SourceId": "Wasm",
       "SourceType": "Computed",
@@ -4996,23 +5030,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.Encoding.dll"
-    },
-    {
-      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\dy8MZsbB.gz",
-      "SourceId": "Wasm",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\e7hN4LlF.gz",
@@ -6426,21 +6443,21 @@
       "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.dll"
     },
     {
-      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\P71Wc0xy.gz",
+      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\pCCeufnD.gz",
       "SourceId": "Wasm",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
+      "RelatedAsset": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
+      "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\pScDoK1N.gz",
@@ -6645,6 +6662,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.AppContext.dll"
+    },
+    {
+      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\r2m9LQkA.gz",
+      "SourceId": "Wasm",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\rf72hKpk.gz",
@@ -6934,6 +6968,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Xml.XmlSerializer.dll"
+    },
+    {
+      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\t9IYNwvY.gz",
+      "SourceId": "Wasm",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\tdxs26KB.gz",
@@ -7495,6 +7546,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.dll"
+    },
+    {
+      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\xYFTiM+U.gz",
+      "SourceId": "Wasm",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\obj\\Debug\\net7.0\\build-gz\\y7lUBkc8.gz",

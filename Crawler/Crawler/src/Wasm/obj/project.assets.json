@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "Blazored.LocalStorage/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/Blazored.LocalStorage.dll": {}
+        }
+      },
       "FluentValidation/11.5.2": {
         "type": "package",
         "compile": {
@@ -62,11 +74,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authorization/7.0.5": {
+      "Microsoft.AspNetCore.Authorization/7.0.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "7.0.5",
-          "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
+          "Microsoft.AspNetCore.Metadata": "7.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.1",
           "Microsoft.Extensions.Options": "7.0.1"
         },
         "compile": {
@@ -80,11 +92,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components/7.0.5": {
+      "Microsoft.AspNetCore.Components/7.0.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "7.0.5",
-          "Microsoft.AspNetCore.Components.Analyzers": "7.0.5"
+          "Microsoft.AspNetCore.Authorization": "7.0.8",
+          "Microsoft.AspNetCore.Components.Analyzers": "7.0.8"
         },
         "compile": {
           "lib/net7.0/Microsoft.AspNetCore.Components.dll": {
@@ -97,10 +109,27 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/7.0.5": {
+      "Microsoft.AspNetCore.Components.Analyzers/7.0.8": {
         "type": "package",
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.Authorization/7.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "7.0.8",
+          "Microsoft.AspNetCore.Components": "7.0.8"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.AspNetCore.Components.Authorization.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Components.Authorization.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.AspNetCore.Components.Forms/7.0.5": {
@@ -248,7 +277,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Metadata/7.0.5": {
+      "Microsoft.AspNetCore.Metadata/7.0.8": {
         "type": "package",
         "compile": {
           "lib/net7.0/Microsoft.AspNetCore.Metadata.dll": {
@@ -884,6 +913,18 @@
       }
     },
     "net7.0/browser-wasm": {
+      "Blazored.LocalStorage/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/Blazored.LocalStorage.dll": {}
+        }
+      },
       "FluentValidation/11.5.2": {
         "type": "package",
         "compile": {
@@ -944,11 +985,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authorization/7.0.5": {
+      "Microsoft.AspNetCore.Authorization/7.0.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "7.0.5",
-          "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
+          "Microsoft.AspNetCore.Metadata": "7.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.1",
           "Microsoft.Extensions.Options": "7.0.1"
         },
         "compile": {
@@ -962,11 +1003,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components/7.0.5": {
+      "Microsoft.AspNetCore.Components/7.0.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "7.0.5",
-          "Microsoft.AspNetCore.Components.Analyzers": "7.0.5"
+          "Microsoft.AspNetCore.Authorization": "7.0.8",
+          "Microsoft.AspNetCore.Components.Analyzers": "7.0.8"
         },
         "compile": {
           "lib/net7.0/Microsoft.AspNetCore.Components.dll": {
@@ -979,10 +1020,27 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/7.0.5": {
+      "Microsoft.AspNetCore.Components.Analyzers/7.0.8": {
         "type": "package",
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.Authorization/7.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "7.0.8",
+          "Microsoft.AspNetCore.Components": "7.0.8"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.AspNetCore.Components.Authorization.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Components.Authorization.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.AspNetCore.Components.Forms/7.0.5": {
@@ -1130,7 +1188,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Metadata/7.0.5": {
+      "Microsoft.AspNetCore.Metadata/7.0.8": {
         "type": "package",
         "compile": {
           "lib/net7.0/Microsoft.AspNetCore.Metadata.dll": {
@@ -1761,6 +1819,20 @@
     }
   },
   "libraries": {
+    "Blazored.LocalStorage/4.3.0": {
+      "sha512": "CfHp9SWN45cM/TM8uw4pELQBfCRtMssCMSOjsEXVWibeYBn36TLpzw+J1vsC2Su2BEQ3Et19A5+GqK1S3kHbTQ==",
+      "type": "package",
+      "path": "blazored.localstorage/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazored.localstorage.4.3.0.nupkg.sha512",
+        "blazored.localstorage.nuspec",
+        "icon.png",
+        "lib/net6.0/Blazored.LocalStorage.dll",
+        "lib/net7.0/Blazored.LocalStorage.dll"
+      ]
+    },
     "FluentValidation/11.5.2": {
       "sha512": "kj/hW/iusp2zq1Vt1YPLgDj6UG0DhoJXGkLwjLwm3j7vUtRF8DVA5vHJfItG3BxDjLWJUR2pvw8fK7rnuysZNA==",
       "type": "package",
@@ -1831,10 +1903,10 @@
         "mediatr.contracts.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Authorization/7.0.5": {
-      "sha512": "17BgaYa1QB8mOERZ/TSNwsWHrh65iU61VrsqivbZc+VUqnACtPCPbP0MFl/7CznXWCOXQZ59QRB6A5t0skyo2g==",
+    "Microsoft.AspNetCore.Authorization/7.0.8": {
+      "sha512": "zjCONh03Bi4oR35hpe32Ny319StIxy/vmM4SKKxuWn5knsmjLNgofxz9zau1V8upBpkeUZN9sh3qxdmDhQx01Q==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authorization/7.0.5",
+      "path": "microsoft.aspnetcore.authorization/7.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1846,14 +1918,14 @@
         "lib/net7.0/Microsoft.AspNetCore.Authorization.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
-        "microsoft.aspnetcore.authorization.7.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.7.0.8.nupkg.sha512",
         "microsoft.aspnetcore.authorization.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components/7.0.5": {
-      "sha512": "9xYFXpfEI2H5W3lVSBjzMPK/kGVdMKI49laoUqkjjILMGHdMcnk7ckB7D4SbkzVUWa2rHNXn7H5oiYiL62blTw==",
+    "Microsoft.AspNetCore.Components/7.0.8": {
+      "sha512": "cPYzxPLegK2YUIBGXzBc+wIxI0q5HGnB9QE0bxThcCiplvTfCRtFuvW04/gntewgN4ZgQ6tt9ezOL0jEodRuDQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components/7.0.5",
+      "path": "microsoft.aspnetcore.components/7.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1861,14 +1933,14 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net7.0/Microsoft.AspNetCore.Components.dll",
         "lib/net7.0/Microsoft.AspNetCore.Components.xml",
-        "microsoft.aspnetcore.components.7.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.components.7.0.8.nupkg.sha512",
         "microsoft.aspnetcore.components.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Analyzers/7.0.5": {
-      "sha512": "jjweXKrkmQ9E2MWyHCuGHAk4I7mIY6WCjq35iRbJWl2nW8G2t41hWrEwUXip5qeL5YzAaiucPMPkHwgc1NH4jA==",
+    "Microsoft.AspNetCore.Components.Analyzers/7.0.8": {
+      "sha512": "ijRxeqsfBdbnP/qlEytUp/EvscgXnKOgoP8e8QThAZTQwWwygWW7X45nFQEyx0v/18YYLyVN10lMaaMRb6Q0Nw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.analyzers/7.0.5",
+      "path": "microsoft.aspnetcore.components.analyzers/7.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1877,8 +1949,23 @@
         "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
         "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
         "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
-        "microsoft.aspnetcore.components.analyzers.7.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.components.analyzers.7.0.8.nupkg.sha512",
         "microsoft.aspnetcore.components.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Authorization/7.0.8": {
+      "sha512": "11UJlaRhtA/VBxpacH6ZqwX82AdRXLGFzhp6QtB/w/s0TtPLbwE7k1Awre4ibfnQnaCvtY1NBeH2z6FvqWj8aQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.authorization/7.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/net7.0/Microsoft.AspNetCore.Components.Authorization.dll",
+        "lib/net7.0/Microsoft.AspNetCore.Components.Authorization.xml",
+        "microsoft.aspnetcore.components.authorization.7.0.8.nupkg.sha512",
+        "microsoft.aspnetcore.components.authorization.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Components.Forms/7.0.5": {
@@ -2165,10 +2252,10 @@
         "microsoft.aspnetcore.http.connections.common.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Metadata/7.0.5": {
-      "sha512": "S+EJS5RwVfrgBEyYKvNfMVQPH8CNIRhIH5UkGKalwIcppiYpi6k8pv7GDqjLiKLVa06LY+kNftXfUM5PwW7z/w==",
+    "Microsoft.AspNetCore.Metadata/7.0.8": {
+      "sha512": "1+pY4X78hsIGwHsz1jgCoIy5MGbMeCfUyKV+qy42IPCjeFT+zBsmrSw7axnyE6yrbOvY/8YrOt9fsV4l94bGtA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.metadata/7.0.5",
+      "path": "microsoft.aspnetcore.metadata/7.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2180,7 +2267,7 @@
         "lib/net7.0/Microsoft.AspNetCore.Metadata.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
-        "microsoft.aspnetcore.metadata.7.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.7.0.8.nupkg.sha512",
         "microsoft.aspnetcore.metadata.nuspec"
       ]
     },
@@ -3079,7 +3166,9 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Application >= 1.0.0",
+      "Blazored.LocalStorage >= 4.3.0",
       "Domain >= 1.0.0",
+      "Microsoft.AspNetCore.Components.Authorization >= 7.0.8",
       "Microsoft.AspNetCore.Components.WebAssembly >= 7.0.5",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 7.0.5",
       "Microsoft.AspNetCore.SignalR.Client >= 7.0.8"
@@ -3137,6 +3226,14 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "Blazored.LocalStorage": {
+            "target": "Package",
+            "version": "[4.3.0, )"
+          },
+          "Microsoft.AspNetCore.Components.Authorization": {
+            "target": "Package",
+            "version": "[7.0.8, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[7.0.5, )"

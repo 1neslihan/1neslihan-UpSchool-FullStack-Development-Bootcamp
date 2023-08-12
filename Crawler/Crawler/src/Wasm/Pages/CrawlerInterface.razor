@@ -1,6 +1,7 @@
 ﻿@page "/CrawlerInterface"
 @using Application.Common.Interfaces
 @*@using Domain.Dtos;*@
+@layout Wasm.Shared.NoMenuLayout
 @using Microsoft.AspNetCore.SignalR.Client
 @using Application.Common.Models.SignalR
 @inject HttpClient httpClient;
@@ -170,8 +171,10 @@
 <style>
     body {
         background-color: #F1D4E5;
-        padding: 10px;
-    }  
+        padding:10px;
+        
+    }
+
     #Header{
         font-family:Verdana, Geneva, Tahoma, sans-serif;
         text-align: center;

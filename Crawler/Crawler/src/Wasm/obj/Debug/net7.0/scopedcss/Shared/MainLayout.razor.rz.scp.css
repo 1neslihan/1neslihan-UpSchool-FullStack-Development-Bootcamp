@@ -2,6 +2,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    background-color:#DDD;
 }
 
 main[b-26700662ey] {
@@ -9,7 +10,7 @@ main[b-26700662ey] {
 }
 
 .sidebar[b-26700662ey] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-image: linear-gradient(to bottom, #4F46E5, #120056);
 }
 
 .top-row[b-26700662ey] {

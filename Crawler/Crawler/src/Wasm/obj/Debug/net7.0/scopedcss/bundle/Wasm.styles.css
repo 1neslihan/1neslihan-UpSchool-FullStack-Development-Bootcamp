@@ -155,6 +155,9 @@ main[b-26700662ey] {
     position: relative;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: #DDD;
 }
 
 main[b-2omtemizm2] {

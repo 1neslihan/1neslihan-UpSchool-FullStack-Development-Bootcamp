@@ -1,51 +1,157 @@
 ﻿@page "/login";
+@using Application.Features.Auth.Commands.Login;
+@using Newtonsoft.Json;
+@using System.Text;
+@using Newtonsoft.Json.Linq;
+@layout NoMenuLayout;
+@inject HttpClient httpClient
+@inject IJSRuntime JSRuntime
 
 <PageTitle>Login</PageTitle>
 
-<h3>Login</h3>
+<div class="col-4 mx-auto text-center mb-3 pt-5 Montserrat">
 
-<div>
+    <img src="./images/apple-touch-icon.png"
+         style="height:9rem;padding-bottom:5px;"
+         alt="Crawler Logo" />
+    <h4 class="pt-5 fw-bold">Log in to your account</h4>
+
+</div>
+<div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6 mx-auto  text-center Montserrat fw-bold" style="color:#F34441; visibility: @(errorMessage ? "visible" : "hidden" )">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </svg> Incorrect email or password
+</div>
+
+<div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6 mx-auto  text-center Montserrat">
+
     <form>
-        <div style="width:25%;">
-            <label for="email">Email Address</label>
-            <input type="email" @bind="email" @oninput="HandleEmailInput" name="email" class="form-control" id="email">
-        </div>
-        <div style="width:25%;">
-            <label for="password">Password</label>
+        <div style="width:100%;" class="mt-4 text-start">
+            <div class="pb-3">
+                <label for="email" class="pb-2 fw-bold text-sm">Email Address</label>
+                <input type="email" @bind="email" @oninput="HandleEmailInput" name="email" class="form-control" id="email">
+            </div>
+            <div class="pb-4"
+            <label for="password" class="pb-2 fw-bold text-sm">Password</label>
             <input type="password" @bind="password" @oninput="HandlePasswordInput" name="password" class="form-control" id="password">
         </div>
 
-        <div>
-            <button type="submit" class="btn btn-primary" @onclick="HandleLogin">
-                Login
-            </button>
 
         </div>
     </form>
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn indigo" @onclick="HandleLogin">
+            Login
+        </button>
+        <button type="submit" class="btn indigo" @onclick="HandleGoogleLogin">
+            Google Login
+        </button>
+    </div>
+    <p class="pt-4 text-secondary">Not a member? <span class="fw-bold" style="color:#4F46E5; cursor:pointer;">Register Now!</span></p>
 </div>
 
 @code {
+    private const string BASE_URL = "https://localhost:7090/api";
+    private bool errorMessage = false;
     private string email;
     private string password;
 
-    private void HandleLogin(MouseEventArgs e)
+    public async Task HandleLogin(MouseEventArgs e)
     {
         // email ve password değerleri burada kullanılabilir
         // Örneğin: Veritabanı ile karşılaştırma, kimlik doğrulama işlemleri, vb.
-        Console.WriteLine("email: ",email);
-        Console.WriteLine("password: ",password);
+        var loginRequest = new AuthLoginCommand()
+            {
+                Email = email,
+                Password = password
+            };
+
+
+        try
+        {
+            var loginResponse = await SendHttpPostRequest<AuthLoginCommand, object>(httpClient, $"{BASE_URL}/Authentication/Login", loginRequest);
+            var jsonResponse = JsonConvert.SerializeObject(loginResponse);
+            // JSON verisini localStorage'e kaydet
+            //await JSRuntime.InvokeVoidAsync("localStorage.setItem", "loginResponse", jsonResponse);
+
+            // JSON verisini ayrıştırarak accessToken ve expires değerlerini al
+            var jsonObject = JObject.Parse(jsonResponse);
+            var accessToken = jsonObject["accessToken"].ToString();
+            var expires = jsonObject["expires"].ToString();
+
+            // accessToken ve expires değerlerini ayrı ayrı localStorage'e kaydet
+            await JSRuntime.InvokeVoidAsync("localStorage.setItem", "accessToken", accessToken);
+            await JSRuntime.InvokeVoidAsync("localStorage.setItem", "expires", expires);
+        }
+        catch (HttpRequestException ex)
+        {
+            errorMessage = true;
+        }
+
+
+
+    }
+
+    private void HandleGoogleLogin()
+    {
+        
     }
 
     private void HandleEmailInput(ChangeEventArgs e)
     {
         email = e.Value.ToString();
-        Console.WriteLine($"Email: {email}");
+        
     }
 
     private void HandlePasswordInput(ChangeEventArgs e)
     {
         password = e.Value.ToString();
-        Console.WriteLine($"Password: {password}");
+        
     }
 
+    public async Task<TResponse> SendHttpPostRequest<TRequest, TResponse>(HttpClient httpClient, string url, TRequest payload)
+    {
+        var jsonPayload = JsonConvert.SerializeObject(payload);
+        var httpContent = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
+
+        // Authorization başlığını ayarla
+        //httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+
+
+        var response = await httpClient.PostAsync(url, httpContent);
+        response.EnsureSuccessStatusCode();
+
+        var jsonResponse = await response.Content.ReadAsStringAsync();
+        var responseObject = JsonConvert.DeserializeObject<TResponse>(jsonResponse);
+        //Console.WriteLine($"Response: {responseObject}");
+
+        return responseObject;
+    }
 }
+
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        /*         padding-top: 40px;
+                                padding-bottom: 40px; */
+
+        min-height: 100vh;
+    }
+
+    .Montserrat {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .indigo {
+        background-color: #4F46E5;
+        color: white;
+    }
+
+        .indigo:hover {
+            opacity: 0.85;
+            color: white;
+        }
+
+</style>
+

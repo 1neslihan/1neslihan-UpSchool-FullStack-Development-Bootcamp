@@ -1,0 +1,32 @@
+﻿@page "/social-login"
+
+@inject NavigationManager navigationManager
+@inject IJSRuntime JSRuntime
+
+@code {
+    private string accessToken;
+    private string expires;
+
+    protected override void OnInitialized()
+    {
+        var uri = new Uri(navigationManager.Uri);
+        var queryParams = System.Web.HttpUtility.ParseQueryString(uri.Query);
+
+        if (!string.IsNullOrEmpty(queryParams["access_token"]))
+        {
+            accessToken = queryParams["access_token"];
+        }
+
+        if (!string.IsNullOrEmpty(queryParams["expiry_date"]))
+        {
+            expires = queryParams["expiry_date"];
+        }
+    }
+}
+
+@if (!string.IsNullOrEmpty(accessToken) && !string.IsNullOrEmpty(expires))
+{
+    JSRuntime.InvokeVoidAsync("localStorage.setItem", "accessToken", accessToken);
+    JSRuntime.InvokeVoidAsync("localStorage.setItem", "expires", expires);
+    navigationManager.NavigateTo("/");
+}

@@ -6,6 +6,7 @@
 @layout NoMenuLayout;
 @inject HttpClient httpClient
 @inject IJSRuntime JSRuntime
+@inject NavigationManager navigationManager
 
 <PageTitle>Login</PageTitle>
 
@@ -94,7 +95,7 @@
 
     private void HandleGoogleLogin()
     {
-        
+        navigationManager.NavigateTo($"{BASE_URL}/Authentication/GoogleSignInStart");    
     }
 
     private void HandleEmailInput(ChangeEventArgs e)

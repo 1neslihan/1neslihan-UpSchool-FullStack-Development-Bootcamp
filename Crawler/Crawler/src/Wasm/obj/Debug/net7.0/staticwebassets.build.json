@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "s7Bso1dNhPXs/fWgVsxMQZtb3f+OKUcub2EjR0tjOSw=",
+  "Hash": "IJHiD8LhNkfJKURCQ48CYSDuFTS5NFexDUuEIbgWFX0=",
   "Source": "Wasm",
   "BasePath": "/",
   "Mode": "Root",
@@ -8073,6 +8073,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\apple-touch-icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\wwwroot\\images\\t-android-chrome-512x512.png",
+      "SourceId": "Wasm",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/t-android-chrome-512x512.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\t-android-chrome-512x512.png"
     },
     {
       "Identity": "C:\\Users\\DL_ne\\OneDrive\\Masaüstü\\Github\\UpSchool-FullStack-Development-Bootcamp\\Crawler\\Crawler\\src\\Wasm\\wwwroot\\index.html",
